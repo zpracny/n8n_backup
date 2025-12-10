@@ -1,0 +1,2369 @@
+{
+  "timestamp": "2025-12-10T18:28:21.192Z",
+  "workflows": [
+    {
+      "updatedAt": "2025-12-06T07:29:25.000Z",
+      "createdAt": "2025-12-06T07:18:18.333Z",
+      "id": "9ryUUh8ztF5JN6Bm",
+      "name": "Weekly Trailmetrics report",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "weeks",
+                  "triggerAtDay": [
+                    1
+                  ],
+                  "triggerAtHour": 6
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "9f58c585-4eb0-42c6-8fb2-df090188c9d8",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "https://trailmetrics.pracny.app/api/n8n/weekly-report",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            192,
+            0
+          ],
+          "id": "aaa469d7-ce0c-43e4-856e-0d1fe3dc4b00",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "83f55924-c90f-4fe2-a1d6-b17e36d9784c",
+      "activeVersionId": "83f55924-c90f-4fe2-a1d6-b17e36d9784c",
+      "versionCounter": 10,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-06T07:18:18.345Z",
+          "createdAt": "2025-12-06T07:18:18.345Z",
+          "role": "workflow:owner",
+          "workflowId": "9ryUUh8ztF5JN6Bm",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-10T12:13:41.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    }
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-10",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-06T07:29:25.850Z",
+        "createdAt": "2025-12-06T07:29:25.850Z",
+        "versionId": "83f55924-c90f-4fe2-a1d6-b17e36d9784c",
+        "workflowId": "9ryUUh8ztF5JN6Bm",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "weeks",
+                    "triggerAtDay": [
+                      1
+                    ],
+                    "triggerAtHour": 6
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "9f58c585-4eb0-42c6-8fb2-df090188c9d8",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://trailmetrics.pracny.app/api/n8n/weekly-report",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              192,
+              0
+            ],
+            "id": "aaa469d7-ce0c-43e4-856e-0d1fe3dc4b00",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-10T17:34:53.413Z",
+      "createdAt": "2025-12-10T17:03:39.852Z",
+      "id": "BtK2LZYpMGpVJm5b",
+      "name": "n8n backup",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "weeks",
+                  "triggerAtHour": 3
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "82c997db-39cb-44e9-80d6-37321e3d8ba4",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "filters": {},
+            "requestOptions": {}
+          },
+          "type": "n8n-nodes-base.n8n",
+          "typeVersion": 1,
+          "position": [
+            208,
+            0
+          ],
+          "id": "636908f8-6546-47bc-a105-fe3120307afb",
+          "name": "Get many workflows",
+          "credentials": {
+            "n8nApi": {
+              "id": "Y9gNH3uguhwiwQYk",
+              "name": "n8n account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "operation": "get",
+            "workflowId": {
+              "__rl": true,
+              "value": "={{$json.id}}",
+              "mode": "id"
+            },
+            "requestOptions": {}
+          },
+          "type": "n8n-nodes-base.n8n",
+          "typeVersion": 1,
+          "position": [
+            416,
+            0
+          ],
+          "id": "7b856509-06f5-45e5-9606-930007857a7d",
+          "name": "Get a workflow",
+          "credentials": {
+            "n8nApi": {
+              "id": "Y9gNH3uguhwiwQYk",
+              "name": "n8n account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "jsCode": "// každý item = jedno workflow z \"Get a workflow\"\nreturn [\n  {\n    json: {\n      timestamp: new Date().toISOString(),\n      workflows: $items().map(i => i.json),\n    }\n  }\n];"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            624,
+            0
+          ],
+          "id": "f0b8a1ff-fb7e-434b-aa62-89a5a55ddbd4",
+          "name": "Code in JavaScript"
+        },
+        {
+          "parameters": {
+            "resource": "file",
+            "owner": {
+              "__rl": true,
+              "value": "zpracny",
+              "mode": "list",
+              "cachedResultName": "zpracny",
+              "cachedResultUrl": "https://github.com/zpracny"
+            },
+            "repository": {
+              "__rl": true,
+              "value": "n8n_backup",
+              "mode": "list",
+              "cachedResultName": "n8n_backup",
+              "cachedResultUrl": "https://github.com/zpracny/n8n_backup"
+            },
+            "filePath": "=backups/n8n-workflows-{{$json.timestamp}}.json",
+            "fileContent": "={{ JSON.stringify($json, null, 2) }}",
+            "commitMessage": "=n8n automatic backup {{$json.timestamp}}"
+          },
+          "type": "n8n-nodes-base.github",
+          "typeVersion": 1.1,
+          "position": [
+            832,
+            0
+          ],
+          "id": "510a2e03-8bf9-49a8-91fa-c14ebf7daf80",
+          "name": "Create a file",
+          "webhookId": "7d738a6c-931d-4f91-b0b9-e7a974496fff",
+          "credentials": {
+            "githubApi": {
+              "id": "2FKvnxOMzoZwD9eo",
+              "name": "GitHub account"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "Get many workflows",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get many workflows": {
+          "main": [
+            [
+              {
+                "node": "Get a workflow",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get a workflow": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript": {
+          "main": [
+            [
+              {
+                "node": "Create a file",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "b15c2d8a-1fb0-4803-9bed-4131631d1090",
+      "activeVersionId": "b15c2d8a-1fb0-4803-9bed-4131631d1090",
+      "versionCounter": 6,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-10T17:03:39.854Z",
+          "createdAt": "2025-12-10T17:03:39.854Z",
+          "role": "workflow:owner",
+          "workflowId": "BtK2LZYpMGpVJm5b",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-10T12:13:41.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    }
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-10",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-10T17:33:57.740Z",
+        "createdAt": "2025-12-10T17:33:57.740Z",
+        "versionId": "b15c2d8a-1fb0-4803-9bed-4131631d1090",
+        "workflowId": "BtK2LZYpMGpVJm5b",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "weeks",
+                    "triggerAtHour": 3
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "82c997db-39cb-44e9-80d6-37321e3d8ba4",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "filters": {},
+              "requestOptions": {}
+            },
+            "type": "n8n-nodes-base.n8n",
+            "typeVersion": 1,
+            "position": [
+              208,
+              0
+            ],
+            "id": "636908f8-6546-47bc-a105-fe3120307afb",
+            "name": "Get many workflows",
+            "credentials": {
+              "n8nApi": {
+                "id": "Y9gNH3uguhwiwQYk",
+                "name": "n8n account"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "operation": "get",
+              "workflowId": {
+                "__rl": true,
+                "value": "={{$json.id}}",
+                "mode": "id"
+              },
+              "requestOptions": {}
+            },
+            "type": "n8n-nodes-base.n8n",
+            "typeVersion": 1,
+            "position": [
+              416,
+              0
+            ],
+            "id": "7b856509-06f5-45e5-9606-930007857a7d",
+            "name": "Get a workflow",
+            "credentials": {
+              "n8nApi": {
+                "id": "Y9gNH3uguhwiwQYk",
+                "name": "n8n account"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "jsCode": "// každý item = jedno workflow z \"Get a workflow\"\nreturn [\n  {\n    json: {\n      timestamp: new Date().toISOString(),\n      workflows: $items().map(i => i.json),\n    }\n  }\n];"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              624,
+              0
+            ],
+            "id": "f0b8a1ff-fb7e-434b-aa62-89a5a55ddbd4",
+            "name": "Code in JavaScript"
+          },
+          {
+            "parameters": {
+              "resource": "file",
+              "owner": {
+                "__rl": true,
+                "value": "zpracny",
+                "mode": "list",
+                "cachedResultName": "zpracny",
+                "cachedResultUrl": "https://github.com/zpracny"
+              },
+              "repository": {
+                "__rl": true,
+                "value": "n8n_backup",
+                "mode": "list",
+                "cachedResultName": "n8n_backup",
+                "cachedResultUrl": "https://github.com/zpracny/n8n_backup"
+              },
+              "filePath": "=backups/n8n-workflows-{{$json.timestamp}}.json",
+              "fileContent": "={{ JSON.stringify($json, null, 2) }}",
+              "commitMessage": "=n8n automatic backup {{$json.timestamp}}"
+            },
+            "type": "n8n-nodes-base.github",
+            "typeVersion": 1.1,
+            "position": [
+              832,
+              0
+            ],
+            "id": "510a2e03-8bf9-49a8-91fa-c14ebf7daf80",
+            "name": "Create a file",
+            "webhookId": "7d738a6c-931d-4f91-b0b9-e7a974496fff",
+            "credentials": {
+              "githubApi": {
+                "id": "2FKvnxOMzoZwD9eo",
+                "name": "GitHub account"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "Get many workflows",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Get many workflows": {
+            "main": [
+              [
+                {
+                  "node": "Get a workflow",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Get a workflow": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript": {
+            "main": [
+              [
+                {
+                  "node": "Create a file",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-06T07:31:23.000Z",
+      "createdAt": "2025-12-06T07:29:41.351Z",
+      "id": "GZtSJNoSQMmDW4yR",
+      "name": "Monthly Trailmetrics report",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "months",
+                  "triggerAtHour": 6,
+                  "triggerAtMinute": 30
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "54f75120-e816-4945-9afb-16b28bbac9f9",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "https://trailmetrics.pracny.app/api/n8n/monthly-report",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            192,
+            0
+          ],
+          "id": "00832169-4f78-4b68-a0c3-8898e5021ead",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "b1958d76-94b3-4327-89f4-bba1d83e45c1",
+      "activeVersionId": "b1958d76-94b3-4327-89f4-bba1d83e45c1",
+      "versionCounter": 12,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-06T07:29:41.362Z",
+          "createdAt": "2025-12-06T07:29:41.362Z",
+          "role": "workflow:owner",
+          "workflowId": "GZtSJNoSQMmDW4yR",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-10T12:13:41.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    }
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-10",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-06T07:31:22.976Z",
+        "createdAt": "2025-12-06T07:31:22.976Z",
+        "versionId": "b1958d76-94b3-4327-89f4-bba1d83e45c1",
+        "workflowId": "GZtSJNoSQMmDW4yR",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "months",
+                    "triggerAtHour": 6,
+                    "triggerAtMinute": 30
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "54f75120-e816-4945-9afb-16b28bbac9f9",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://trailmetrics.pracny.app/api/n8n/monthly-report",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              192,
+              0
+            ],
+            "id": "00832169-4f78-4b68-a0c3-8898e5021ead",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-06T07:17:02.000Z",
+      "createdAt": "2025-12-05T11:57:03.055Z",
+      "id": "I0iR9lLV2wULdYyY",
+      "name": "Sync data from Strava to TrailMetrics",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "hours",
+                  "hoursInterval": 6
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            -464,
+            -80
+          ],
+          "id": "b5a29ad8-2930-4587-9891-09ead1fc016c",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "https://trailmetrics.pracny.app/api/n8n/strava-sync",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            -256,
+            -80
+          ],
+          "id": "f5675e87-3ebf-4f1d-ba12-19f456c4d9ba",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": [
+            12
+          ]
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "111d65b7-52f4-453e-a925-1125e452b425",
+      "activeVersionId": "111d65b7-52f4-453e-a925-1125e452b425",
+      "versionCounter": 18,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-05T11:57:03.076Z",
+          "createdAt": "2025-12-05T11:57:03.076Z",
+          "role": "workflow:owner",
+          "workflowId": "I0iR9lLV2wULdYyY",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-10T12:13:41.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    }
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-10",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-06T07:17:02.149Z",
+        "createdAt": "2025-12-06T07:17:02.149Z",
+        "versionId": "111d65b7-52f4-453e-a925-1125e452b425",
+        "workflowId": "I0iR9lLV2wULdYyY",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "hours",
+                    "hoursInterval": 6
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              -464,
+              -80
+            ],
+            "id": "b5a29ad8-2930-4587-9891-09ead1fc016c",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://trailmetrics.pracny.app/api/n8n/strava-sync",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              -256,
+              -80
+            ],
+            "id": "f5675e87-3ebf-4f1d-ba12-19f456c4d9ba",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-06T11:08:26.000Z",
+      "createdAt": "2025-12-06T09:24:21.294Z",
+      "id": "NrgQ6cNa7sHp2SdZ",
+      "name": "Trailmetrics maintanence report",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "cronExpression",
+                  "expression": "0 0 0 1 1 *"
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "703c8c54-76b3-448c-b334-1dadef7a4433",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "https://trailmetrics.pracny.app/api/n8n/maintenance-check",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            192,
+            0
+          ],
+          "id": "c1c5f055-60e5-48d3-a466-e35ba803214d",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "8a671425-48fc-42f0-8a06-f247597672c7",
+      "activeVersionId": "8a671425-48fc-42f0-8a06-f247597672c7",
+      "versionCounter": 16,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-06T09:24:21.313Z",
+          "createdAt": "2025-12-06T09:24:21.313Z",
+          "role": "workflow:owner",
+          "workflowId": "NrgQ6cNa7sHp2SdZ",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-10T12:13:41.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    }
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-10",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-06T11:08:26.032Z",
+        "createdAt": "2025-12-06T11:08:26.032Z",
+        "versionId": "8a671425-48fc-42f0-8a06-f247597672c7",
+        "workflowId": "NrgQ6cNa7sHp2SdZ",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "cronExpression",
+                    "expression": "0 0 0 1 1 *"
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "703c8c54-76b3-448c-b334-1dadef7a4433",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://trailmetrics.pracny.app/api/n8n/maintenance-check",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              192,
+              0
+            ],
+            "id": "c1c5f055-60e5-48d3-a466-e35ba803214d",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-10T12:43:43.644Z",
+      "createdAt": "2025-12-10T08:41:21.925Z",
+      "id": "dHQzpTlCCEjNLwYg",
+      "name": "pracny.app Firestore database backup",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "weeks",
+                  "triggerAtHour": 3
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "5a06f58b-3c84-49be-831b-d2cb4d61a80e",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "resource": "collection",
+            "projectId": "pracny-app",
+            "returnAll": true
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            208,
+            0
+          ],
+          "id": "12ec5084-fb58-49ea-bd7d-06af8dacb269",
+          "name": "Get many collections",
+          "credentials": {
+            "googleApi": {
+              "id": "7SEdATwtd8U6o87G",
+              "name": "Google Firebase Cloud Firestore pracny.app"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "jsCode": "// Input: z Get many collections dostaneš items jako\n// [{ json: { name: \"digitalGear\" } }, { json: { name: \"gearCategories\" } }, ...]\n// Cíl: pro každý název kolekce vytvořit jeden item, aby se přes něj\n// mohl spustit Firestore node \"Get Many Documents\" s dynamickým názvem kolekce.\n\nconst results = [];\n\n// Projdi všechny vstupní položky (každá má json.name = název kolekce)\nfor (const item of $input.all()) {\n  const collectionName = item.json.name;\n\n  // Můžeš případně některé kolekce přeskočit, např. jen vybrané:\n  // if (!['digitalGear', 'gearCategories', 'photos', 'posts', 'projects', 'yearlyStats'].includes(collectionName)) {\n  //   continue;\n  // }\n\n  results.push({\n    json: {\n      collection: collectionName,\n    },\n  });\n}\n\n// Výstup: pole items, kde každý item má json.collection = název kolekce\nreturn results;\n"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            416,
+            0
+          ],
+          "id": "32dcc4dc-3a3c-48f4-b874-0594a219ff43",
+          "name": "Code in JavaScript"
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "operation": "getAll",
+            "projectId": "pracny-app",
+            "collection": "={{$json.collection}}\n",
+            "returnAll": true
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            624,
+            0
+          ],
+          "id": "85890dc3-4866-4aac-b9c9-21ac14fe5cb6",
+          "name": "Get many documents",
+          "credentials": {
+            "googleApi": {
+              "id": "7SEdATwtd8U6o87G",
+              "name": "Google Firebase Cloud Firestore pracny.app"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "jsCode": "// Cíl: poskládat výstup ve tvaru:\n// {\n//   digitalGear: [ {...doc1}, {...doc2}, ... ],\n//   gearCategories: [ ... ],\n//   photos: [ ... ],\n//   posts: [ ... ],\n//   projects: [ ... ],\n//   yearlyStats: [ ... ]\n// }\n\nconst backup = {};\n\nconst items = $input.all();\n\nfor (const item of items) {\n  const data = item.json;\n\n  const fullName = data._name;\n  if (!fullName) {\n    continue;\n  }\n\n  const parts = fullName.split('/');\n  const docId = parts[parts.length - 1];\n  const collectionName = parts[parts.length - 2];\n\n  if (!collectionName) {\n    continue;\n  }\n\n  if (!backup[collectionName]) {\n    backup[collectionName] = [];\n  }\n\n  // Odfiltrujeme interní metadata, necháme si jen vlastní data + id\n  const { _name, _createTime, _updateTime, ...cleanData } = data;\n\n  backup[collectionName].push({\n    id: docId,\n    ...cleanData,\n  });\n}\n\n// DŮLEŽITÉ: vždy vrátit pole objektů\nreturn [\n  {\n    json: backup,\n  },\n];\n"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            832,
+            0
+          ],
+          "id": "65e6b80f-a096-44d2-9d1c-9298b703e078",
+          "name": "Code in JavaScript1"
+        },
+        {
+          "parameters": {
+            "operation": "toJson",
+            "options": {
+              "fileName": "=pracny-firestore-{{$now}}.json"
+            }
+          },
+          "type": "n8n-nodes-base.convertToFile",
+          "typeVersion": 1.1,
+          "position": [
+            1040,
+            0
+          ],
+          "id": "ccda1b1f-50ba-4fe2-8cc9-690c8d89dd6d",
+          "name": "Convert to File"
+        },
+        {
+          "parameters": {
+            "name": "=pracny-firestore-{{$now}}.json",
+            "driveId": {
+              "__rl": true,
+              "mode": "list",
+              "value": "My Drive"
+            },
+            "folderId": {
+              "__rl": true,
+              "value": "1MtqpcClEnkSARhaVpkm4QroHRJ8O8e1d",
+              "mode": "list",
+              "cachedResultName": "firestore",
+              "cachedResultUrl": "https://drive.google.com/drive/folders/1MtqpcClEnkSARhaVpkm4QroHRJ8O8e1d"
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.googleDrive",
+          "typeVersion": 3,
+          "position": [
+            1248,
+            0
+          ],
+          "id": "8fe281e4-fcc7-46a1-ac1c-4c5e9de117fc",
+          "name": "Upload file",
+          "credentials": {
+            "googleDriveOAuth2Api": {
+              "id": "8cfLA4WSbdrMdYUd",
+              "name": "Google Drive account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "operation": "create",
+            "projectId": "pracny-app",
+            "collection": "backupLogs",
+            "columns": "={\n  \"type\": \"pracny-firestore\",\n  \"status\": \"success\",\n  \"timestamp\": \"{{$now}}\",\n  \"message\": \"Záloha pracny.app Firestore na Google Drive proběhla úspěšně.\"\n}"
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            1456,
+            0
+          ],
+          "id": "3a18632b-ff85-4f86-8d7d-eafc5bb05b8e",
+          "name": "Create a document",
+          "credentials": {
+            "googleApi": {
+              "id": "7SEdATwtd8U6o87G",
+              "name": "Google Firebase Cloud Firestore pracny.app"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "Get many collections",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get many collections": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript": {
+          "main": [
+            [
+              {
+                "node": "Get many documents",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get many documents": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript1",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript1": {
+          "main": [
+            [
+              {
+                "node": "Convert to File",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Convert to File": {
+          "main": [
+            [
+              {
+                "node": "Upload file",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Upload file": {
+          "main": [
+            [
+              {
+                "node": "Create a document",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "4319cd88-2409-4c25-8834-a0b3b73a80db",
+      "activeVersionId": "4319cd88-2409-4c25-8834-a0b3b73a80db",
+      "versionCounter": 14,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-10T08:41:21.930Z",
+          "createdAt": "2025-12-10T08:41:21.930Z",
+          "role": "workflow:owner",
+          "workflowId": "dHQzpTlCCEjNLwYg",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-10T12:13:41.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    }
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-10",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-10T12:43:33.091Z",
+        "createdAt": "2025-12-10T12:43:33.091Z",
+        "versionId": "4319cd88-2409-4c25-8834-a0b3b73a80db",
+        "workflowId": "dHQzpTlCCEjNLwYg",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "weeks",
+                    "triggerAtHour": 3
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "5a06f58b-3c84-49be-831b-d2cb4d61a80e",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "resource": "collection",
+              "projectId": "pracny-app",
+              "returnAll": true
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              208,
+              0
+            ],
+            "id": "12ec5084-fb58-49ea-bd7d-06af8dacb269",
+            "name": "Get many collections",
+            "credentials": {
+              "googleApi": {
+                "id": "7SEdATwtd8U6o87G",
+                "name": "Google Firebase Cloud Firestore pracny.app"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "jsCode": "// Input: z Get many collections dostaneš items jako\n// [{ json: { name: \"digitalGear\" } }, { json: { name: \"gearCategories\" } }, ...]\n// Cíl: pro každý název kolekce vytvořit jeden item, aby se přes něj\n// mohl spustit Firestore node \"Get Many Documents\" s dynamickým názvem kolekce.\n\nconst results = [];\n\n// Projdi všechny vstupní položky (každá má json.name = název kolekce)\nfor (const item of $input.all()) {\n  const collectionName = item.json.name;\n\n  // Můžeš případně některé kolekce přeskočit, např. jen vybrané:\n  // if (!['digitalGear', 'gearCategories', 'photos', 'posts', 'projects', 'yearlyStats'].includes(collectionName)) {\n  //   continue;\n  // }\n\n  results.push({\n    json: {\n      collection: collectionName,\n    },\n  });\n}\n\n// Výstup: pole items, kde každý item má json.collection = název kolekce\nreturn results;\n"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              416,
+              0
+            ],
+            "id": "32dcc4dc-3a3c-48f4-b874-0594a219ff43",
+            "name": "Code in JavaScript"
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "operation": "getAll",
+              "projectId": "pracny-app",
+              "collection": "={{$json.collection}}\n",
+              "returnAll": true
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              624,
+              0
+            ],
+            "id": "85890dc3-4866-4aac-b9c9-21ac14fe5cb6",
+            "name": "Get many documents",
+            "credentials": {
+              "googleApi": {
+                "id": "7SEdATwtd8U6o87G",
+                "name": "Google Firebase Cloud Firestore pracny.app"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "jsCode": "// Cíl: poskládat výstup ve tvaru:\n// {\n//   digitalGear: [ {...doc1}, {...doc2}, ... ],\n//   gearCategories: [ ... ],\n//   photos: [ ... ],\n//   posts: [ ... ],\n//   projects: [ ... ],\n//   yearlyStats: [ ... ]\n// }\n\nconst backup = {};\n\nconst items = $input.all();\n\nfor (const item of items) {\n  const data = item.json;\n\n  const fullName = data._name;\n  if (!fullName) {\n    continue;\n  }\n\n  const parts = fullName.split('/');\n  const docId = parts[parts.length - 1];\n  const collectionName = parts[parts.length - 2];\n\n  if (!collectionName) {\n    continue;\n  }\n\n  if (!backup[collectionName]) {\n    backup[collectionName] = [];\n  }\n\n  // Odfiltrujeme interní metadata, necháme si jen vlastní data + id\n  const { _name, _createTime, _updateTime, ...cleanData } = data;\n\n  backup[collectionName].push({\n    id: docId,\n    ...cleanData,\n  });\n}\n\n// DŮLEŽITÉ: vždy vrátit pole objektů\nreturn [\n  {\n    json: backup,\n  },\n];\n"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              832,
+              0
+            ],
+            "id": "65e6b80f-a096-44d2-9d1c-9298b703e078",
+            "name": "Code in JavaScript1"
+          },
+          {
+            "parameters": {
+              "operation": "toJson",
+              "options": {
+                "fileName": "=pracny-firestore-{{$now}}.json"
+              }
+            },
+            "type": "n8n-nodes-base.convertToFile",
+            "typeVersion": 1.1,
+            "position": [
+              1040,
+              0
+            ],
+            "id": "ccda1b1f-50ba-4fe2-8cc9-690c8d89dd6d",
+            "name": "Convert to File"
+          },
+          {
+            "parameters": {
+              "name": "=pracny-firestore-{{$now}}.json",
+              "driveId": {
+                "__rl": true,
+                "mode": "list",
+                "value": "My Drive"
+              },
+              "folderId": {
+                "__rl": true,
+                "value": "1MtqpcClEnkSARhaVpkm4QroHRJ8O8e1d",
+                "mode": "list",
+                "cachedResultName": "firestore",
+                "cachedResultUrl": "https://drive.google.com/drive/folders/1MtqpcClEnkSARhaVpkm4QroHRJ8O8e1d"
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.googleDrive",
+            "typeVersion": 3,
+            "position": [
+              1248,
+              0
+            ],
+            "id": "8fe281e4-fcc7-46a1-ac1c-4c5e9de117fc",
+            "name": "Upload file",
+            "credentials": {
+              "googleDriveOAuth2Api": {
+                "id": "8cfLA4WSbdrMdYUd",
+                "name": "Google Drive account"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "operation": "create",
+              "projectId": "pracny-app",
+              "collection": "backupLogs",
+              "columns": "={\n  \"type\": \"pracny-firestore\",\n  \"status\": \"success\",\n  \"timestamp\": \"{{$now}}\",\n  \"message\": \"Záloha pracny.app Firestore na Google Drive proběhla úspěšně.\"\n}"
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              1456,
+              0
+            ],
+            "id": "3a18632b-ff85-4f86-8d7d-eafc5bb05b8e",
+            "name": "Create a document",
+            "credentials": {
+              "googleApi": {
+                "id": "7SEdATwtd8U6o87G",
+                "name": "Google Firebase Cloud Firestore pracny.app"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "Get many collections",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Get many collections": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript": {
+            "main": [
+              [
+                {
+                  "node": "Get many documents",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Get many documents": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript1",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript1": {
+            "main": [
+              [
+                {
+                  "node": "Convert to File",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Convert to File": {
+            "main": [
+              [
+                {
+                  "node": "Upload file",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Upload file": {
+            "main": [
+              [
+                {
+                  "node": "Create a document",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-06T07:34:32.000Z",
+      "createdAt": "2025-12-06T07:31:35.801Z",
+      "id": "iDsEfMqEd8TJI4qI",
+      "name": "Yearly Trailmetrics report",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "cronExpression",
+                  "expression": "0 0 0 1 1 *"
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "47fbf11e-ef70-4db0-9f47-e151880cbb80",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "https://trailmetrics.pracny.app/api/n8n/yearly-report",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            192,
+            0
+          ],
+          "id": "1cfed478-029f-462e-9e79-1488bf9fbe4e",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "e623817f-d681-4f8a-bada-2f8a9cb22281",
+      "activeVersionId": "e623817f-d681-4f8a-bada-2f8a9cb22281",
+      "versionCounter": 14,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-06T07:31:35.813Z",
+          "createdAt": "2025-12-06T07:31:35.813Z",
+          "role": "workflow:owner",
+          "workflowId": "iDsEfMqEd8TJI4qI",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-10T12:13:41.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    }
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-10",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-06T07:34:32.207Z",
+        "createdAt": "2025-12-06T07:34:32.207Z",
+        "versionId": "e623817f-d681-4f8a-bada-2f8a9cb22281",
+        "workflowId": "iDsEfMqEd8TJI4qI",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "cronExpression",
+                    "expression": "0 0 0 1 1 *"
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "47fbf11e-ef70-4db0-9f47-e151880cbb80",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://trailmetrics.pracny.app/api/n8n/yearly-report",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              192,
+              0
+            ],
+            "id": "1cfed478-029f-462e-9e79-1488bf9fbe4e",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-09T18:35:30.027Z",
+      "createdAt": "2025-12-06T11:08:50.221Z",
+      "id": "tWQyLhT4m0CorMyk",
+      "name": "Trailmetrics YTD status",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "triggerAtHour": 7
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "bb10313e-1495-4831-8f27-e6574f173061",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "url": "https://trailmetrics.pracny.app/api/stats/yearly?",
+            "sendQuery": true,
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "year",
+                  "value": "={{ new Date().getFullYear() }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            160,
+            0
+          ],
+          "id": "923a6d15-53f1-4164-9140-bcf616f0f41f",
+          "name": "HTTP Request"
+        },
+        {
+          "parameters": {
+            "jsCode": "const trailmetricsData = items[0].json;\n\nreturn [{\n  json: {\n    __id__: new Date().getFullYear().toString(),\n    year: trailmetricsData.year,\n    totalDistance: trailmetricsData.totalDistance,\n    totalElevation: trailmetricsData.totalElevation,\n    updatedAt: new Date().toISOString(),\n  }\n}];"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            368,
+            0
+          ],
+          "id": "6a757afa-4d37-477f-b26f-8d1a08842d72",
+          "name": "Code"
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "operation": "upsert",
+            "projectId": "pracny-app",
+            "collection": "yearlyStats",
+            "updateKey": "__id__",
+            "columns": "year,totalDistance,totalElevation,updatedAt"
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            576,
+            0
+          ],
+          "id": "7a618fb7-e2c4-45c1-85aa-6e1f8f05ec3d",
+          "name": "Create or update a document",
+          "credentials": {
+            "googleApi": {
+              "id": "7SEdATwtd8U6o87G",
+              "name": "Google Firebase Cloud Firestore account"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "HTTP Request": {
+          "main": [
+            [
+              {
+                "node": "Code",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code": {
+          "main": [
+            [
+              {
+                "node": "Create or update a document",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "08a34fce-5028-4463-ac4e-f93c521cef37",
+      "activeVersionId": "08a34fce-5028-4463-ac4e-f93c521cef37",
+      "versionCounter": 22,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-06T11:08:50.233Z",
+          "createdAt": "2025-12-06T11:08:50.233Z",
+          "role": "workflow:owner",
+          "workflowId": "tWQyLhT4m0CorMyk",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-10T12:13:41.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    }
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-10",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-09T18:35:30.032Z",
+        "createdAt": "2025-12-09T18:35:30.032Z",
+        "versionId": "08a34fce-5028-4463-ac4e-f93c521cef37",
+        "workflowId": "tWQyLhT4m0CorMyk",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "triggerAtHour": 7
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "bb10313e-1495-4831-8f27-e6574f173061",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "url": "https://trailmetrics.pracny.app/api/stats/yearly?",
+              "sendQuery": true,
+              "queryParameters": {
+                "parameters": [
+                  {
+                    "name": "year",
+                    "value": "={{ new Date().getFullYear() }}"
+                  }
+                ]
+              },
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              160,
+              0
+            ],
+            "id": "923a6d15-53f1-4164-9140-bcf616f0f41f",
+            "name": "HTTP Request"
+          },
+          {
+            "parameters": {
+              "jsCode": "const trailmetricsData = items[0].json;\n\nreturn [{\n  json: {\n    __id__: new Date().getFullYear().toString(),\n    year: trailmetricsData.year,\n    totalDistance: trailmetricsData.totalDistance,\n    totalElevation: trailmetricsData.totalElevation,\n    updatedAt: new Date().toISOString(),\n  }\n}];"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              368,
+              0
+            ],
+            "id": "6a757afa-4d37-477f-b26f-8d1a08842d72",
+            "name": "Code"
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "operation": "upsert",
+              "projectId": "pracny-app",
+              "collection": "yearlyStats",
+              "updateKey": "__id__",
+              "columns": "year,totalDistance,totalElevation,updatedAt"
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              576,
+              0
+            ],
+            "id": "7a618fb7-e2c4-45c1-85aa-6e1f8f05ec3d",
+            "name": "Create or update a document",
+            "credentials": {
+              "googleApi": {
+                "id": "7SEdATwtd8U6o87G",
+                "name": "Google Firebase Cloud Firestore account"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "HTTP Request": {
+            "main": [
+              [
+                {
+                  "node": "Code",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code": {
+            "main": [
+              [
+                {
+                  "node": "Create or update a document",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    }
+  ]
+}
