@@ -1,0 +1,5394 @@
+{
+  "timestamp": "2025-12-21T02:00:57.405Z",
+  "workflows": [
+    {
+      "updatedAt": "2025-12-06T07:29:25.000Z",
+      "createdAt": "2025-12-06T07:18:18.333Z",
+      "id": "9ryUUh8ztF5JN6Bm",
+      "name": "Weekly Trailmetrics report",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "weeks",
+                  "triggerAtDay": [
+                    1
+                  ],
+                  "triggerAtHour": 6
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "9f58c585-4eb0-42c6-8fb2-df090188c9d8",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "https://trailmetrics.pracny.app/api/n8n/weekly-report",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            192,
+            0
+          ],
+          "id": "aaa469d7-ce0c-43e4-856e-0d1fe3dc4b00",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "83f55924-c90f-4fe2-a1d6-b17e36d9784c",
+      "activeVersionId": "83f55924-c90f-4fe2-a1d6-b17e36d9784c",
+      "versionCounter": 13,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-06T07:18:18.345Z",
+          "createdAt": "2025-12-06T07:18:18.345Z",
+          "role": "workflow:owner",
+          "workflowId": "9ryUUh8ztF5JN6Bm",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-06T07:29:25.850Z",
+        "createdAt": "2025-12-06T07:29:25.850Z",
+        "versionId": "83f55924-c90f-4fe2-a1d6-b17e36d9784c",
+        "workflowId": "9ryUUh8ztF5JN6Bm",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "weeks",
+                    "triggerAtDay": [
+                      1
+                    ],
+                    "triggerAtHour": 6
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "9f58c585-4eb0-42c6-8fb2-df090188c9d8",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://trailmetrics.pracny.app/api/n8n/weekly-report",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              192,
+              0
+            ],
+            "id": "aaa469d7-ce0c-43e4-856e-0d1fe3dc4b00",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-16T18:33:18.601Z",
+      "createdAt": "2025-12-16T17:22:16.728Z",
+      "id": "An3lDCu6WUUKcog9",
+      "name": "Weather forecast",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "weeks",
+                  "triggerAtDay": [
+                    5
+                  ],
+                  "triggerAtHour": 7
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "e2526bc0-35a5-43b2-9b02-4070cf00c929",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "jsCode": "return [\n  {\n    json: {\n      name: \"🌲 Brdy (Třemošná)\",\n      lat: 49.681,\n      lon: 13.910\n    }\n  },\n  {\n    json: {\n      name: \"🏔️ Šumava (Modrava)\",\n      lat: 49.024,\n      lon: 13.498\n    }\n  },\n  {\n    json: {\n      name: \"🏰 Blatensko\",\n      lat: 49.417,\n      lon: 13.818\n    }\n  }\n];"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            208,
+            0
+          ],
+          "id": "10cc87ca-5b2a-4d7a-bc47-838eaa67a420",
+          "name": "Code in JavaScript"
+        },
+        {
+          "parameters": {
+            "options": {}
+          },
+          "type": "n8n-nodes-base.splitInBatches",
+          "typeVersion": 3,
+          "position": [
+            496,
+            0
+          ],
+          "id": "452a2d78-4317-4afb-9d6d-e6c261fda500",
+          "name": "Loop Over Items"
+        },
+        {
+          "parameters": {
+            "url": "https://api.open-meteo.com/v1/forecast",
+            "sendQuery": true,
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "latitude",
+                  "value": "={{ $json.lat }}"
+                },
+                {
+                  "name": "longitude",
+                  "value": "={{ $json.lon }}"
+                },
+                {
+                  "name": "daily",
+                  "value": "weather_code,temperature_2m_max,precipitation_sum"
+                },
+                {
+                  "name": "timezone",
+                  "value": "auto"
+                },
+                {
+                  "name": "forecast_days",
+                  "value": "3"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            880,
+            -16
+          ],
+          "id": "2e2b001e-1e3e-469b-9aa9-a75b82a491ed",
+          "name": "HTTP Request"
+        },
+        {
+          "parameters": {
+            "mode": "runOnceForEachItem",
+            "jsCode": "// 1. Data\nconst daily = $json.daily;\nconst location = $('Loop Over Items').all()[$itemIndex].json.name;\n\nfunction getWeatherIcon(code) {\n  if (code <= 1) return \"☀️\";\n  if (code <= 3) return \"⛅\";\n  if (code <= 48) return \"🌫️\";\n  if (code <= 67) return \"🌧️\";\n  if (code <= 77) return \"🌨️\";\n  if (code >= 80) return \"⛈️\";\n  return \"☁️\";\n}\n\n// ZMĚNA: Používáme HTML značky\n// <h3> je nadpis pro místo\nlet message = `<h3 style=\"margin-bottom: 5px; color: #2c3e50;\">${location}</h3>`; \nconst days = ['Pá', 'So', 'Ne'];\n\nfor (let i = 0; i < 3; i++) {\n  if (daily && daily.temperature_2m_max[i] !== undefined) {\n      const temp = Math.round(daily.temperature_2m_max[i]);\n      const icon = getWeatherIcon(daily.weather_code[i]);\n      \n      // ZMĚNA: <b> pro tučný den, <br> pro nový řádek, &nbsp; pro odsazení\n      message += `&nbsp;&nbsp;<b>${days[i]}:</b> ${temp}°C ${icon}<br>`;\n  }\n}\n\nreturn {\n  json: {\n    formattedMessage: message\n  }\n};"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            1088,
+            -16
+          ],
+          "id": "4fd33695-3608-4a26-b84a-ddf71450347a",
+          "name": "Formatovani"
+        },
+        {
+          "parameters": {
+            "jsCode": "// Sáhneme si pro výsledky\nconst allItems = $('Formatovani').all();\n\n// 1. Spojíme zprávy a vložíme mezi ně HTML čáru (<hr>)\nconst fullText = allItems\n    .map(item => item.json.formattedMessage)\n    .join('<hr style=\"border: 0; border-top: 1px dashed #ccc; margin: 15px 0;\">');\n\n// 2. Obalíme to do hlavního divu a přidáme hlavní nadpis\nconst finalMessage = `\n<div style=\"font-family: Arial, sans-serif; color: #333; max-width: 600px;\">\n  <h2 style=\"color: #d35400;\">🌤️ Víkendový plánovač</h2>\n  <p style=\"color: #7f8c8d; font-size: 14px;\">Předpověď pro tvá oblíbená místa</p>\n  <div style=\"border: 1px solid #eee; padding: 15px; border-radius: 8px; background-color: #f9f9f9;\">\n    ${fullText}\n  </div>\n</div>\n`;\n\nreturn {\n  json: {\n    message: finalMessage\n  }\n};"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            784,
+            224
+          ],
+          "id": "b6195739-1bb1-4376-ad26-a21b2cc9883d",
+          "name": "Code in JavaScript1"
+        },
+        {
+          "parameters": {
+            "sendTo": "zdenek.pracny@outlook.com",
+            "subject": "Počasí na víkend",
+            "message": "={{ $('Code in JavaScript1').first().json.message }}",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.gmail",
+          "typeVersion": 2.2,
+          "position": [
+            1040,
+            224
+          ],
+          "id": "d930c6af-ba4c-4e08-9ec7-af85901aab72",
+          "name": "Send a message",
+          "webhookId": "e540c588-56b0-4436-a44f-65b1ea48a55c",
+          "credentials": {
+            "gmailOAuth2": {
+              "id": "EP4apxE1Qbr3zv7F",
+              "name": "Gmail account"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript": {
+          "main": [
+            [
+              {
+                "node": "Loop Over Items",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Loop Over Items": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "Code in JavaScript1",
+                "type": "main",
+                "index": 0
+              }
+            ],
+            [
+              {
+                "node": "Loop Over Items",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "HTTP Request": {
+          "main": [
+            [
+              {
+                "node": "Formatovani",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Formatovani": {
+          "main": [
+            []
+          ]
+        },
+        "Code in JavaScript1": {
+          "main": [
+            [
+              {
+                "node": "Send a message",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "f0c100e8-1d1a-45a7-b80d-97b0f02b680a",
+      "activeVersionId": "f0c100e8-1d1a-45a7-b80d-97b0f02b680a",
+      "versionCounter": 10,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-16T17:22:16.733Z",
+          "createdAt": "2025-12-16T17:22:16.733Z",
+          "role": "workflow:owner",
+          "workflowId": "An3lDCu6WUUKcog9",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-16T18:33:18.603Z",
+        "createdAt": "2025-12-16T18:33:18.603Z",
+        "versionId": "f0c100e8-1d1a-45a7-b80d-97b0f02b680a",
+        "workflowId": "An3lDCu6WUUKcog9",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "weeks",
+                    "triggerAtDay": [
+                      5
+                    ],
+                    "triggerAtHour": 7
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "e2526bc0-35a5-43b2-9b02-4070cf00c929",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "jsCode": "return [\n  {\n    json: {\n      name: \"🌲 Brdy (Třemošná)\",\n      lat: 49.681,\n      lon: 13.910\n    }\n  },\n  {\n    json: {\n      name: \"🏔️ Šumava (Modrava)\",\n      lat: 49.024,\n      lon: 13.498\n    }\n  },\n  {\n    json: {\n      name: \"🏰 Blatensko\",\n      lat: 49.417,\n      lon: 13.818\n    }\n  }\n];"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              208,
+              0
+            ],
+            "id": "10cc87ca-5b2a-4d7a-bc47-838eaa67a420",
+            "name": "Code in JavaScript"
+          },
+          {
+            "parameters": {
+              "options": {}
+            },
+            "type": "n8n-nodes-base.splitInBatches",
+            "typeVersion": 3,
+            "position": [
+              496,
+              0
+            ],
+            "id": "452a2d78-4317-4afb-9d6d-e6c261fda500",
+            "name": "Loop Over Items"
+          },
+          {
+            "parameters": {
+              "url": "https://api.open-meteo.com/v1/forecast",
+              "sendQuery": true,
+              "queryParameters": {
+                "parameters": [
+                  {
+                    "name": "latitude",
+                    "value": "={{ $json.lat }}"
+                  },
+                  {
+                    "name": "longitude",
+                    "value": "={{ $json.lon }}"
+                  },
+                  {
+                    "name": "daily",
+                    "value": "weather_code,temperature_2m_max,precipitation_sum"
+                  },
+                  {
+                    "name": "timezone",
+                    "value": "auto"
+                  },
+                  {
+                    "name": "forecast_days",
+                    "value": "3"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              880,
+              -16
+            ],
+            "id": "2e2b001e-1e3e-469b-9aa9-a75b82a491ed",
+            "name": "HTTP Request"
+          },
+          {
+            "parameters": {
+              "mode": "runOnceForEachItem",
+              "jsCode": "// 1. Data\nconst daily = $json.daily;\nconst location = $('Loop Over Items').all()[$itemIndex].json.name;\n\nfunction getWeatherIcon(code) {\n  if (code <= 1) return \"☀️\";\n  if (code <= 3) return \"⛅\";\n  if (code <= 48) return \"🌫️\";\n  if (code <= 67) return \"🌧️\";\n  if (code <= 77) return \"🌨️\";\n  if (code >= 80) return \"⛈️\";\n  return \"☁️\";\n}\n\n// ZMĚNA: Používáme HTML značky\n// <h3> je nadpis pro místo\nlet message = `<h3 style=\"margin-bottom: 5px; color: #2c3e50;\">${location}</h3>`; \nconst days = ['Pá', 'So', 'Ne'];\n\nfor (let i = 0; i < 3; i++) {\n  if (daily && daily.temperature_2m_max[i] !== undefined) {\n      const temp = Math.round(daily.temperature_2m_max[i]);\n      const icon = getWeatherIcon(daily.weather_code[i]);\n      \n      // ZMĚNA: <b> pro tučný den, <br> pro nový řádek, &nbsp; pro odsazení\n      message += `&nbsp;&nbsp;<b>${days[i]}:</b> ${temp}°C ${icon}<br>`;\n  }\n}\n\nreturn {\n  json: {\n    formattedMessage: message\n  }\n};"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              1088,
+              -16
+            ],
+            "id": "4fd33695-3608-4a26-b84a-ddf71450347a",
+            "name": "Formatovani"
+          },
+          {
+            "parameters": {
+              "jsCode": "// Sáhneme si pro výsledky\nconst allItems = $('Formatovani').all();\n\n// 1. Spojíme zprávy a vložíme mezi ně HTML čáru (<hr>)\nconst fullText = allItems\n    .map(item => item.json.formattedMessage)\n    .join('<hr style=\"border: 0; border-top: 1px dashed #ccc; margin: 15px 0;\">');\n\n// 2. Obalíme to do hlavního divu a přidáme hlavní nadpis\nconst finalMessage = `\n<div style=\"font-family: Arial, sans-serif; color: #333; max-width: 600px;\">\n  <h2 style=\"color: #d35400;\">🌤️ Víkendový plánovač</h2>\n  <p style=\"color: #7f8c8d; font-size: 14px;\">Předpověď pro tvá oblíbená místa</p>\n  <div style=\"border: 1px solid #eee; padding: 15px; border-radius: 8px; background-color: #f9f9f9;\">\n    ${fullText}\n  </div>\n</div>\n`;\n\nreturn {\n  json: {\n    message: finalMessage\n  }\n};"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              784,
+              224
+            ],
+            "id": "b6195739-1bb1-4376-ad26-a21b2cc9883d",
+            "name": "Code in JavaScript1"
+          },
+          {
+            "parameters": {
+              "sendTo": "zdenek.pracny@outlook.com",
+              "subject": "Počasí na víkend",
+              "message": "={{ $('Code in JavaScript1').first().json.message }}",
+              "options": {}
+            },
+            "type": "n8n-nodes-base.gmail",
+            "typeVersion": 2.2,
+            "position": [
+              1040,
+              224
+            ],
+            "id": "d930c6af-ba4c-4e08-9ec7-af85901aab72",
+            "name": "Send a message",
+            "webhookId": "e540c588-56b0-4436-a44f-65b1ea48a55c",
+            "credentials": {
+              "gmailOAuth2": {
+                "id": "EP4apxE1Qbr3zv7F",
+                "name": "Gmail account"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript": {
+            "main": [
+              [
+                {
+                  "node": "Loop Over Items",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Loop Over Items": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                },
+                {
+                  "node": "Code in JavaScript1",
+                  "type": "main",
+                  "index": 0
+                }
+              ],
+              [
+                {
+                  "node": "Loop Over Items",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "HTTP Request": {
+            "main": [
+              [
+                {
+                  "node": "Formatovani",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Formatovani": {
+            "main": [
+              []
+            ]
+          },
+          "Code in JavaScript1": {
+            "main": [
+              [
+                {
+                  "node": "Send a message",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-10T18:31:57.122Z",
+      "createdAt": "2025-12-10T17:03:39.852Z",
+      "id": "BtK2LZYpMGpVJm5b",
+      "name": "n8n backup",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "weeks",
+                  "triggerAtHour": 3
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "82c997db-39cb-44e9-80d6-37321e3d8ba4",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "filters": {},
+            "requestOptions": {}
+          },
+          "type": "n8n-nodes-base.n8n",
+          "typeVersion": 1,
+          "position": [
+            208,
+            0
+          ],
+          "id": "636908f8-6546-47bc-a105-fe3120307afb",
+          "name": "Get many workflows",
+          "credentials": {
+            "n8nApi": {
+              "id": "Y9gNH3uguhwiwQYk",
+              "name": "n8n account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "operation": "get",
+            "workflowId": {
+              "__rl": true,
+              "value": "={{$json.id}}",
+              "mode": "id"
+            },
+            "requestOptions": {}
+          },
+          "type": "n8n-nodes-base.n8n",
+          "typeVersion": 1,
+          "position": [
+            416,
+            0
+          ],
+          "id": "7b856509-06f5-45e5-9606-930007857a7d",
+          "name": "Get a workflow",
+          "credentials": {
+            "n8nApi": {
+              "id": "Y9gNH3uguhwiwQYk",
+              "name": "n8n account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "jsCode": "// každý item = jedno workflow z \"Get a workflow\"\nreturn [\n  {\n    json: {\n      timestamp: new Date().toISOString(),\n      workflows: $items().map(i => i.json),\n    }\n  }\n];"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            624,
+            0
+          ],
+          "id": "f0b8a1ff-fb7e-434b-aa62-89a5a55ddbd4",
+          "name": "Code in JavaScript"
+        },
+        {
+          "parameters": {
+            "resource": "file",
+            "owner": {
+              "__rl": true,
+              "value": "zpracny",
+              "mode": "list",
+              "cachedResultName": "zpracny",
+              "cachedResultUrl": "https://github.com/zpracny"
+            },
+            "repository": {
+              "__rl": true,
+              "value": "n8n_backup",
+              "mode": "list",
+              "cachedResultName": "n8n_backup",
+              "cachedResultUrl": "https://github.com/zpracny/n8n_backup"
+            },
+            "filePath": "=backups/n8n-workflows-{{$json.timestamp}}.json",
+            "fileContent": "={{ JSON.stringify($json, null, 2) }}",
+            "commitMessage": "=n8n automatic backup {{$json.timestamp}}"
+          },
+          "type": "n8n-nodes-base.github",
+          "typeVersion": 1.1,
+          "position": [
+            832,
+            0
+          ],
+          "id": "510a2e03-8bf9-49a8-91fa-c14ebf7daf80",
+          "name": "Create a file",
+          "webhookId": "7d738a6c-931d-4f91-b0b9-e7a974496fff",
+          "credentials": {
+            "githubApi": {
+              "id": "2FKvnxOMzoZwD9eo",
+              "name": "GitHub account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "operation": "create",
+            "projectId": "pracny-app",
+            "collection": "backupLogs",
+            "columns": "={\n  \"type\": \"n8n-github-backup\",\n  \"status\": \"success\",\n  \"timestamp\": \"{{$now}}\",\n  \"message\": \"Záloha n8n workflows do GitHub repa proběhla úspěšně.\",\n  \"filePath\": \"backups/n8n-workflows-{{$json.timestamp}}.json\"\n}\n"
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            1040,
+            0
+          ],
+          "id": "c9f4ca68-b66b-4e90-9083-2a2806c15f91",
+          "name": "Create a document",
+          "credentials": {
+            "googleApi": {
+              "id": "7SEdATwtd8U6o87G",
+              "name": "Google Firebase Cloud Firestore pracny.app"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "Get many workflows",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get many workflows": {
+          "main": [
+            [
+              {
+                "node": "Get a workflow",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get a workflow": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript": {
+          "main": [
+            [
+              {
+                "node": "Create a file",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Create a file": {
+          "main": [
+            [
+              {
+                "node": "Create a document",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "12b5a63b-0270-447f-9ac5-21b36fdad7c3",
+      "activeVersionId": "12b5a63b-0270-447f-9ac5-21b36fdad7c3",
+      "versionCounter": 11,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-10T17:03:39.854Z",
+          "createdAt": "2025-12-10T17:03:39.854Z",
+          "role": "workflow:owner",
+          "workflowId": "BtK2LZYpMGpVJm5b",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-10T18:31:57.123Z",
+        "createdAt": "2025-12-10T18:31:57.123Z",
+        "versionId": "12b5a63b-0270-447f-9ac5-21b36fdad7c3",
+        "workflowId": "BtK2LZYpMGpVJm5b",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "weeks",
+                    "triggerAtHour": 3
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "82c997db-39cb-44e9-80d6-37321e3d8ba4",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "filters": {},
+              "requestOptions": {}
+            },
+            "type": "n8n-nodes-base.n8n",
+            "typeVersion": 1,
+            "position": [
+              208,
+              0
+            ],
+            "id": "636908f8-6546-47bc-a105-fe3120307afb",
+            "name": "Get many workflows",
+            "credentials": {
+              "n8nApi": {
+                "id": "Y9gNH3uguhwiwQYk",
+                "name": "n8n account"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "operation": "get",
+              "workflowId": {
+                "__rl": true,
+                "value": "={{$json.id}}",
+                "mode": "id"
+              },
+              "requestOptions": {}
+            },
+            "type": "n8n-nodes-base.n8n",
+            "typeVersion": 1,
+            "position": [
+              416,
+              0
+            ],
+            "id": "7b856509-06f5-45e5-9606-930007857a7d",
+            "name": "Get a workflow",
+            "credentials": {
+              "n8nApi": {
+                "id": "Y9gNH3uguhwiwQYk",
+                "name": "n8n account"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "jsCode": "// každý item = jedno workflow z \"Get a workflow\"\nreturn [\n  {\n    json: {\n      timestamp: new Date().toISOString(),\n      workflows: $items().map(i => i.json),\n    }\n  }\n];"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              624,
+              0
+            ],
+            "id": "f0b8a1ff-fb7e-434b-aa62-89a5a55ddbd4",
+            "name": "Code in JavaScript"
+          },
+          {
+            "parameters": {
+              "resource": "file",
+              "owner": {
+                "__rl": true,
+                "value": "zpracny",
+                "mode": "list",
+                "cachedResultName": "zpracny",
+                "cachedResultUrl": "https://github.com/zpracny"
+              },
+              "repository": {
+                "__rl": true,
+                "value": "n8n_backup",
+                "mode": "list",
+                "cachedResultName": "n8n_backup",
+                "cachedResultUrl": "https://github.com/zpracny/n8n_backup"
+              },
+              "filePath": "=backups/n8n-workflows-{{$json.timestamp}}.json",
+              "fileContent": "={{ JSON.stringify($json, null, 2) }}",
+              "commitMessage": "=n8n automatic backup {{$json.timestamp}}"
+            },
+            "type": "n8n-nodes-base.github",
+            "typeVersion": 1.1,
+            "position": [
+              832,
+              0
+            ],
+            "id": "510a2e03-8bf9-49a8-91fa-c14ebf7daf80",
+            "name": "Create a file",
+            "webhookId": "7d738a6c-931d-4f91-b0b9-e7a974496fff",
+            "credentials": {
+              "githubApi": {
+                "id": "2FKvnxOMzoZwD9eo",
+                "name": "GitHub account"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "operation": "create",
+              "projectId": "pracny-app",
+              "collection": "backupLogs",
+              "columns": "={\n  \"type\": \"n8n-github-backup\",\n  \"status\": \"success\",\n  \"timestamp\": \"{{$now}}\",\n  \"message\": \"Záloha n8n workflows do GitHub repa proběhla úspěšně.\",\n  \"filePath\": \"backups/n8n-workflows-{{$json.timestamp}}.json\"\n}\n"
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              1040,
+              0
+            ],
+            "id": "c9f4ca68-b66b-4e90-9083-2a2806c15f91",
+            "name": "Create a document",
+            "credentials": {
+              "googleApi": {
+                "id": "7SEdATwtd8U6o87G",
+                "name": "Google Firebase Cloud Firestore pracny.app"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "Get many workflows",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Get many workflows": {
+            "main": [
+              [
+                {
+                  "node": "Get a workflow",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Get a workflow": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript": {
+            "main": [
+              [
+                {
+                  "node": "Create a file",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Create a file": {
+            "main": [
+              [
+                {
+                  "node": "Create a document",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-18T17:44:42.622Z",
+      "createdAt": "2025-12-18T15:59:21.135Z",
+      "id": "Bw8qy1ayLhAszHKI",
+      "name": "Trailmetrics Firestore database backup",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "weeks",
+                  "triggerAtHour": 3
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            144
+          ],
+          "id": "9784cc01-42da-4ffd-bed5-5c7f4c9cd7b6",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "operation": "getAll",
+            "projectId": "strava-gpx-downloader",
+            "collection": "users",
+            "returnAll": true
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            208,
+            144
+          ],
+          "id": "392ab5dc-83f9-4980-bc32-580bc664ba67",
+          "name": "Get many documents1",
+          "credentials": {
+            "googleApi": {
+              "id": "nUnaTGVBnAj8oUwp",
+              "name": "TrailMetrics Google Firebase Cloud Firestore account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "jsCode": "// 1. Definuj, co všechno má uživatel pod sebou\n// (Podle tvého screenu tam vidím expeditions, goals, settings... a asi i activities)\nconst subCollections = [\n  \"expeditions\",\n  \"activities\", \n  \"goals\", \n  \"settings\"\n];\n\n// 2. Definuj globální kolekce (mimo uživatele)\nconst globalCollections = [\n  \"users\",            // Samotné profily uživatelů\n  \"publicProfiles\", \n  \"expedition_photos\"\n];\n\nconst users = $input.all();\nlet tasks = [];\n\n// A) Nejprve přidáme globální kolekce\n// Ty se stahují jen jednou, nezávisle na uživatelích\nglobalCollections.forEach(name => {\n  tasks.push({\n    json: {\n      path: name,\n      type: \"global\",\n      fileName: `global_${name}`\n    }\n  });\n});\n\n// B) Projdeme všechny nalezené uživatele\nfor (const userItem of users) {\n  // TADY JE TA ZMĚNA - bereme _id z tvého screenshotu\n  const userId = userItem.json._id; \n\n  if (!userId) continue;\n\n  // Pro každého uživatele vygenerujeme úkol pro každou pod-složku\n  subCollections.forEach(subCol => {\n    tasks.push({\n      json: {\n        // Vytvoříme cestu: users/1j6on.../expeditions\n        path: `users/${userId}/${subCol}`,\n        type: \"user_data\",\n        // Název souboru bude unikátní: user_1j6on_expeditions\n        fileName: `user_${userId}_${subCol}`\n      }\n    });\n  });\n}\n\nreturn tasks;"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            416,
+            144
+          ],
+          "id": "1176ef1a-256a-42de-935f-3b0a6fc0c966",
+          "name": "Code in JavaScript2"
+        },
+        {
+          "parameters": {},
+          "type": "n8n-nodes-base.noOp",
+          "name": "Replace Me",
+          "typeVersion": 1,
+          "position": [
+            816,
+            384
+          ],
+          "id": "980bb819-d59f-47f4-bb2e-5c88aeac92b5"
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "operation": "getAll",
+            "projectId": "strava-gpx-downloader",
+            "collection": "={{ $node[\"Split In Batches\"].json[\"path\"] }}",
+            "returnAll": true
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            912,
+            128
+          ],
+          "id": "83e5c663-54d6-4f4d-8c4c-e16c79ec6136",
+          "name": "Get many documents2",
+          "credentials": {
+            "googleApi": {
+              "id": "nUnaTGVBnAj8oUwp",
+              "name": "TrailMetrics Google Firebase Cloud Firestore account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "options": {}
+          },
+          "type": "n8n-nodes-base.splitInBatches",
+          "typeVersion": 3,
+          "position": [
+            624,
+            144
+          ],
+          "id": "cef49432-88e9-4044-a65b-78c0f8541dc6",
+          "name": "Split In Batches"
+        },
+        {
+          "parameters": {
+            "jsCode": "// Získáme název souboru z informací o smyčce\n// (Protože Split In Batches si pamatuje, co zrovna zpracováváme)\nconst runIndex = $('Split In Batches').context[\"runIndex\"];\nconst loopItem = $('Split In Batches').all()[0].json; \n\n// Všechna data, která nám vrátil Firestore v tomto kroku\nconst items = $input.all();\n\n// Vytáhneme čistá JSON data (odstraníme n8n obálku)\nconst data = items.map(item => item.json);\n\nreturn {\n  json: {\n    // Název souboru: backup_user_1j6on_expeditions_2025-12-18.json\n    fileName: `backup_${loopItem.fileName}_${new Date().toISOString().split('T')[0]}.json`,\n    count: data.length,\n    data: data\n  }\n};"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            1120,
+            128
+          ],
+          "id": "14087720-4850-4a4c-9ab3-a66da52925f4",
+          "name": "Code in JavaScript3"
+        },
+        {
+          "parameters": {
+            "operation": "toJson",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.convertToFile",
+          "typeVersion": 1.1,
+          "position": [
+            1328,
+            128
+          ],
+          "id": "f4d19448-2784-45b9-9b3d-ed400f1796f8",
+          "name": "Convert to File1"
+        },
+        {
+          "parameters": {
+            "name": "=trailmetrics-firestore-{{$now}}.json",
+            "driveId": {
+              "__rl": true,
+              "mode": "list",
+              "value": "My Drive"
+            },
+            "folderId": {
+              "__rl": true,
+              "value": "1opmDngAPcjrWvpq-5pAGlB8dS72eYnSE",
+              "mode": "list",
+              "cachedResultName": "trailmetrics",
+              "cachedResultUrl": "https://drive.google.com/drive/folders/1opmDngAPcjrWvpq-5pAGlB8dS72eYnSE"
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.googleDrive",
+          "typeVersion": 3,
+          "position": [
+            1536,
+            128
+          ],
+          "id": "e0843d07-73e6-4de1-a097-82e7d9f5ab0b",
+          "name": "Upload file",
+          "credentials": {
+            "googleDriveOAuth2Api": {
+              "id": "8cfLA4WSbdrMdYUd",
+              "name": "Google Drive account"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "Get many documents1",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get many documents1": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript2",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript2": {
+          "main": [
+            [
+              {
+                "node": "Split In Batches",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Replace Me": {
+          "main": [
+            [
+              {
+                "node": "Split In Batches",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Split In Batches": {
+          "main": [
+            [
+              {
+                "node": "Get many documents2",
+                "type": "main",
+                "index": 0
+              }
+            ],
+            [
+              {
+                "node": "Replace Me",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get many documents2": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript3",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript3": {
+          "main": [
+            [
+              {
+                "node": "Convert to File1",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Convert to File1": {
+          "main": [
+            [
+              {
+                "node": "Upload file",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "6c324bbf-0fd3-48de-99e6-1612ab1f397f",
+      "activeVersionId": "6c324bbf-0fd3-48de-99e6-1612ab1f397f",
+      "versionCounter": 27,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-18T15:59:21.137Z",
+          "createdAt": "2025-12-18T15:59:21.137Z",
+          "role": "workflow:owner",
+          "workflowId": "Bw8qy1ayLhAszHKI",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-18T17:44:42.624Z",
+        "createdAt": "2025-12-18T17:44:42.624Z",
+        "versionId": "6c324bbf-0fd3-48de-99e6-1612ab1f397f",
+        "workflowId": "Bw8qy1ayLhAszHKI",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "weeks",
+                    "triggerAtHour": 3
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              144
+            ],
+            "id": "9784cc01-42da-4ffd-bed5-5c7f4c9cd7b6",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "operation": "getAll",
+              "projectId": "strava-gpx-downloader",
+              "collection": "users",
+              "returnAll": true
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              208,
+              144
+            ],
+            "id": "392ab5dc-83f9-4980-bc32-580bc664ba67",
+            "name": "Get many documents1",
+            "credentials": {
+              "googleApi": {
+                "id": "nUnaTGVBnAj8oUwp",
+                "name": "TrailMetrics Google Firebase Cloud Firestore account"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "jsCode": "// 1. Definuj, co všechno má uživatel pod sebou\n// (Podle tvého screenu tam vidím expeditions, goals, settings... a asi i activities)\nconst subCollections = [\n  \"expeditions\",\n  \"activities\", \n  \"goals\", \n  \"settings\"\n];\n\n// 2. Definuj globální kolekce (mimo uživatele)\nconst globalCollections = [\n  \"users\",            // Samotné profily uživatelů\n  \"publicProfiles\", \n  \"expedition_photos\"\n];\n\nconst users = $input.all();\nlet tasks = [];\n\n// A) Nejprve přidáme globální kolekce\n// Ty se stahují jen jednou, nezávisle na uživatelích\nglobalCollections.forEach(name => {\n  tasks.push({\n    json: {\n      path: name,\n      type: \"global\",\n      fileName: `global_${name}`\n    }\n  });\n});\n\n// B) Projdeme všechny nalezené uživatele\nfor (const userItem of users) {\n  // TADY JE TA ZMĚNA - bereme _id z tvého screenshotu\n  const userId = userItem.json._id; \n\n  if (!userId) continue;\n\n  // Pro každého uživatele vygenerujeme úkol pro každou pod-složku\n  subCollections.forEach(subCol => {\n    tasks.push({\n      json: {\n        // Vytvoříme cestu: users/1j6on.../expeditions\n        path: `users/${userId}/${subCol}`,\n        type: \"user_data\",\n        // Název souboru bude unikátní: user_1j6on_expeditions\n        fileName: `user_${userId}_${subCol}`\n      }\n    });\n  });\n}\n\nreturn tasks;"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              416,
+              144
+            ],
+            "id": "1176ef1a-256a-42de-935f-3b0a6fc0c966",
+            "name": "Code in JavaScript2"
+          },
+          {
+            "parameters": {},
+            "type": "n8n-nodes-base.noOp",
+            "name": "Replace Me",
+            "typeVersion": 1,
+            "position": [
+              816,
+              384
+            ],
+            "id": "980bb819-d59f-47f4-bb2e-5c88aeac92b5"
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "operation": "getAll",
+              "projectId": "strava-gpx-downloader",
+              "collection": "={{ $node[\"Split In Batches\"].json[\"path\"] }}",
+              "returnAll": true
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              912,
+              128
+            ],
+            "id": "83e5c663-54d6-4f4d-8c4c-e16c79ec6136",
+            "name": "Get many documents2",
+            "credentials": {
+              "googleApi": {
+                "id": "nUnaTGVBnAj8oUwp",
+                "name": "TrailMetrics Google Firebase Cloud Firestore account"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "options": {}
+            },
+            "type": "n8n-nodes-base.splitInBatches",
+            "typeVersion": 3,
+            "position": [
+              624,
+              144
+            ],
+            "id": "cef49432-88e9-4044-a65b-78c0f8541dc6",
+            "name": "Split In Batches"
+          },
+          {
+            "parameters": {
+              "jsCode": "// Získáme název souboru z informací o smyčce\n// (Protože Split In Batches si pamatuje, co zrovna zpracováváme)\nconst runIndex = $('Split In Batches').context[\"runIndex\"];\nconst loopItem = $('Split In Batches').all()[0].json; \n\n// Všechna data, která nám vrátil Firestore v tomto kroku\nconst items = $input.all();\n\n// Vytáhneme čistá JSON data (odstraníme n8n obálku)\nconst data = items.map(item => item.json);\n\nreturn {\n  json: {\n    // Název souboru: backup_user_1j6on_expeditions_2025-12-18.json\n    fileName: `backup_${loopItem.fileName}_${new Date().toISOString().split('T')[0]}.json`,\n    count: data.length,\n    data: data\n  }\n};"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              1120,
+              128
+            ],
+            "id": "14087720-4850-4a4c-9ab3-a66da52925f4",
+            "name": "Code in JavaScript3"
+          },
+          {
+            "parameters": {
+              "operation": "toJson",
+              "options": {}
+            },
+            "type": "n8n-nodes-base.convertToFile",
+            "typeVersion": 1.1,
+            "position": [
+              1328,
+              128
+            ],
+            "id": "f4d19448-2784-45b9-9b3d-ed400f1796f8",
+            "name": "Convert to File1"
+          },
+          {
+            "parameters": {
+              "name": "=trailmetrics-firestore-{{$now}}.json",
+              "driveId": {
+                "__rl": true,
+                "mode": "list",
+                "value": "My Drive"
+              },
+              "folderId": {
+                "__rl": true,
+                "value": "1opmDngAPcjrWvpq-5pAGlB8dS72eYnSE",
+                "mode": "list",
+                "cachedResultName": "trailmetrics",
+                "cachedResultUrl": "https://drive.google.com/drive/folders/1opmDngAPcjrWvpq-5pAGlB8dS72eYnSE"
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.googleDrive",
+            "typeVersion": 3,
+            "position": [
+              1536,
+              128
+            ],
+            "id": "e0843d07-73e6-4de1-a097-82e7d9f5ab0b",
+            "name": "Upload file",
+            "credentials": {
+              "googleDriveOAuth2Api": {
+                "id": "8cfLA4WSbdrMdYUd",
+                "name": "Google Drive account"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "Get many documents1",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Get many documents1": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript2",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript2": {
+            "main": [
+              [
+                {
+                  "node": "Split In Batches",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Replace Me": {
+            "main": [
+              [
+                {
+                  "node": "Split In Batches",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Split In Batches": {
+            "main": [
+              [
+                {
+                  "node": "Get many documents2",
+                  "type": "main",
+                  "index": 0
+                }
+              ],
+              [
+                {
+                  "node": "Replace Me",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Get many documents2": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript3",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript3": {
+            "main": [
+              [
+                {
+                  "node": "Convert to File1",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Convert to File1": {
+            "main": [
+              [
+                {
+                  "node": "Upload file",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-12T10:23:47.569Z",
+      "createdAt": "2025-12-11T06:30:56.427Z",
+      "id": "Ct1bQRH3fqNonbil",
+      "name": "Bikepacking mail overview",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "cronExpression",
+                  "expression": "0 19 * * 4"
+                },
+                {
+                  "field": "cronExpression",
+                  "expression": "0 7 * * 2"
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            -352,
+            0
+          ],
+          "id": "7e474dc6-91d9-4510-9bbb-25ea202a7b93",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "url": "https://bikepacking.com/feed/",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.rssFeedRead",
+          "typeVersion": 1.2,
+          "position": [
+            -112,
+            0
+          ],
+          "id": "d1ab5bd2-516d-473b-892a-a1d9ca3b78d0",
+          "name": "RSS Read"
+        },
+        {
+          "parameters": {
+            "jsCode": "// items = všechny články z posledních 84 hodin\nconst now = new Date();\nconst eightyfourHoursAgo = new Date(now.getTime() - 84 * 60 * 60 * 1000);\n\nconst filtered = items.filter(item => {\n  const pubDate = new Date(item.json.pubDate);\n  return pubDate > eightyfourHoursAgo;\n});\n\n// Uděláme z nich jeden velký text pro prompt\nconst articlesText = filtered.map(item => {\n  const title = item.json.title;\n  const source = item.json.source || 'Unknown';\n  const desc = (item.json.description || item.json.content || '').substring(0, 400);\n  const link = item.json.link;\n  return `- \"${title}\" (${source})\\n  ${desc}\\n  Link: ${link}`;\n}).join('\\n\\n');\n\nreturn [\n  {\n    json: {\n      articlesText\n    }\n  }\n];\n"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            416,
+            0
+          ],
+          "id": "cd4a638a-6608-484a-8706-3f213fb457bb",
+          "name": "Code in JavaScript"
+        },
+        {
+          "parameters": {
+            "modelId": {
+              "__rl": true,
+              "value": "models/gemini-2.0-flash",
+              "mode": "list",
+              "cachedResultName": "models/gemini-2.0-flash"
+            },
+            "messages": {
+              "values": [
+                {
+                  "content": "=Jsi produktivní asistent na bikepacking a gravel cyklistiku. Články jsou z webů jako bikepacking.com, Bikepacking.cz, CyclingAbout, Cycloscope atd.\n\nTady jsou články:\n\n{{ $json.articlesText }}\n\nÚKOL:\n1. IGNORUJ všechny čistě silniční věci (road racing, aero silniční kola, závody na asfaltu). Zajímají nás jen:\n   - bikepacking, gravel, MTB, adventure / touring,\n   - výbava, brašny, kola, komponenty, úpravy kol,\n   - trasy, reportáže z cest, dovednosti.\n\n2. Z těchto článků vytvoř přehledný digest v češtině PŘESNĚ v tomto formátu:\n\nSHRNUTÍ:\n1–2 odstavce (klidně 6–10 vět celkem), konkrétně popiš:\n- jaké nové KATEGORIE věcí se řeší (např. brašny, rámy, světla, pláště),\n- jaké konkrétní produkty nebo směry vývoje se objevují,\n- jaké typy tras / destinací se zmiňují.\n\nTAKEAWAYS:\n- konkrétní tip 1 (např. „pro zimní bikepacking zvaž X, protože…“)\n- konkrétní tip 2 (konkrétní komponenta, trend nebo princip)\n- konkrétní tip 3\n- konkrétní tip 4\n- klidně přidej další body, pokud dávají smysl (max. 8 bodů)\n\nTOP 3 ČLÁNKY:\n1. Název článku – URL – krátký důvod, proč je užitečný pro bikepacking / gravel.\n2. Název článku – URL – krátký důvod.\n3. Název článku – URL – krátký důvod.\n\nFORMÁT:\n- Každý nadpis (SHRNUTÍ, TAKEAWAYS, TOP 3 ČLÁNKY) začínej na novém řádku.\n- Mezi bloky nech PRÁZDNÝ ŘÁDEK.\n- Bez znaků `#`, bez markdown headingů, jen čistý text s odrážkami `-` a číslovaným seznamem `1.`.\n- Piš přímo pro zkušeného cyklistu, který jezdí gravel/bikepacking a zajímají ho detaily výbavy.\n"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "@n8n/n8n-nodes-langchain.googleGemini",
+          "typeVersion": 1,
+          "position": [
+            624,
+            0
+          ],
+          "id": "49ab324b-c856-43e6-a044-31a01cc62402",
+          "name": "Message a model",
+          "credentials": {
+            "googlePalmApi": {
+              "id": "nwYYcgaI8nEd32Bl",
+              "name": "Google Gemini(PaLM) Api account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "url": "https://www.bikepacking.cz/feed/",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.rssFeedRead",
+          "typeVersion": 1.2,
+          "position": [
+            -112,
+            128
+          ],
+          "id": "99160faf-05d6-4048-b781-3638c55a5c28",
+          "name": "RSS Read1"
+        },
+        {
+          "parameters": {
+            "url": "https://cycloscope.net/feed/",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.rssFeedRead",
+          "typeVersion": 1.2,
+          "position": [
+            -112,
+            -144
+          ],
+          "id": "bf987933-66d3-417a-9ff6-7cd5fda1d416",
+          "name": "RSS Read2"
+        },
+        {
+          "parameters": {
+            "numberInputs": 3
+          },
+          "type": "n8n-nodes-base.merge",
+          "typeVersion": 3.2,
+          "position": [
+            96,
+            -16
+          ],
+          "id": "c6e7f179-4c78-4d38-ad1e-dbafaefeb359",
+          "name": "Merge"
+        },
+        {
+          "parameters": {
+            "sendTo": "zdenek.pracny@outlook.com",
+            "subject": "=🚴 Bikepacking Digest - {{ $now.format('DD.MM.YYYY') }}",
+            "message": "=<h2>🚴 Bikepacking Digest</h2>\n\n<div style=\"font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;\">\n  {{ $json.content.parts[0].text.replace(/\\n\\n/g, '<br><br>').replace(/\\n/g, '<br>') }}\n</div>\n\n<hr style=\"margin-top: 32px; border: none; border-top: 1px solid #ddd;\">\n<p style=\"font-size: 12px; color: #999; font-family: Arial, sans-serif;\">\n  Digest vygenerován automaticky přes n8n.<br>\n  Zdroje: Bikepacking.com, Bikepacking.cz, CyclingAbout.com, Cycloscope.net\n</p>\n",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.gmail",
+          "typeVersion": 2.2,
+          "position": [
+            976,
+            0
+          ],
+          "id": "95420cf9-ab61-4df1-8a57-5e33cbf9843b",
+          "name": "Send a message",
+          "webhookId": "4f3bedc9-0504-484f-b85b-9f6459363c6f",
+          "credentials": {
+            "gmailOAuth2": {
+              "id": "EP4apxE1Qbr3zv7F",
+              "name": "Gmail account"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "RSS Read",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "RSS Read1",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "RSS Read2",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "RSS Read": {
+          "main": [
+            [
+              {
+                "node": "Merge",
+                "type": "main",
+                "index": 1
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript": {
+          "main": [
+            [
+              {
+                "node": "Message a model",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "RSS Read2": {
+          "main": [
+            [
+              {
+                "node": "Merge",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "RSS Read1": {
+          "main": [
+            [
+              {
+                "node": "Merge",
+                "type": "main",
+                "index": 2
+              }
+            ]
+          ]
+        },
+        "Merge": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Message a model": {
+          "main": [
+            [
+              {
+                "node": "Send a message",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "1d0d6f45-b8f1-44bd-863b-511d5340a032",
+      "activeVersionId": "1d0d6f45-b8f1-44bd-863b-511d5340a032",
+      "versionCounter": 17,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-11T06:30:56.431Z",
+          "createdAt": "2025-12-11T06:30:56.431Z",
+          "role": "workflow:owner",
+          "workflowId": "Ct1bQRH3fqNonbil",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-12T10:23:47.571Z",
+        "createdAt": "2025-12-12T10:23:47.571Z",
+        "versionId": "1d0d6f45-b8f1-44bd-863b-511d5340a032",
+        "workflowId": "Ct1bQRH3fqNonbil",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "cronExpression",
+                    "expression": "0 19 * * 4"
+                  },
+                  {
+                    "field": "cronExpression",
+                    "expression": "0 7 * * 2"
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              -352,
+              0
+            ],
+            "id": "7e474dc6-91d9-4510-9bbb-25ea202a7b93",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "url": "https://bikepacking.com/feed/",
+              "options": {}
+            },
+            "type": "n8n-nodes-base.rssFeedRead",
+            "typeVersion": 1.2,
+            "position": [
+              -112,
+              0
+            ],
+            "id": "d1ab5bd2-516d-473b-892a-a1d9ca3b78d0",
+            "name": "RSS Read"
+          },
+          {
+            "parameters": {
+              "jsCode": "// items = všechny články z posledních 84 hodin\nconst now = new Date();\nconst eightyfourHoursAgo = new Date(now.getTime() - 84 * 60 * 60 * 1000);\n\nconst filtered = items.filter(item => {\n  const pubDate = new Date(item.json.pubDate);\n  return pubDate > eightyfourHoursAgo;\n});\n\n// Uděláme z nich jeden velký text pro prompt\nconst articlesText = filtered.map(item => {\n  const title = item.json.title;\n  const source = item.json.source || 'Unknown';\n  const desc = (item.json.description || item.json.content || '').substring(0, 400);\n  const link = item.json.link;\n  return `- \"${title}\" (${source})\\n  ${desc}\\n  Link: ${link}`;\n}).join('\\n\\n');\n\nreturn [\n  {\n    json: {\n      articlesText\n    }\n  }\n];\n"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              416,
+              0
+            ],
+            "id": "cd4a638a-6608-484a-8706-3f213fb457bb",
+            "name": "Code in JavaScript"
+          },
+          {
+            "parameters": {
+              "modelId": {
+                "__rl": true,
+                "value": "models/gemini-2.0-flash",
+                "mode": "list",
+                "cachedResultName": "models/gemini-2.0-flash"
+              },
+              "messages": {
+                "values": [
+                  {
+                    "content": "=Jsi produktivní asistent na bikepacking a gravel cyklistiku. Články jsou z webů jako bikepacking.com, Bikepacking.cz, CyclingAbout, Cycloscope atd.\n\nTady jsou články:\n\n{{ $json.articlesText }}\n\nÚKOL:\n1. IGNORUJ všechny čistě silniční věci (road racing, aero silniční kola, závody na asfaltu). Zajímají nás jen:\n   - bikepacking, gravel, MTB, adventure / touring,\n   - výbava, brašny, kola, komponenty, úpravy kol,\n   - trasy, reportáže z cest, dovednosti.\n\n2. Z těchto článků vytvoř přehledný digest v češtině PŘESNĚ v tomto formátu:\n\nSHRNUTÍ:\n1–2 odstavce (klidně 6–10 vět celkem), konkrétně popiš:\n- jaké nové KATEGORIE věcí se řeší (např. brašny, rámy, světla, pláště),\n- jaké konkrétní produkty nebo směry vývoje se objevují,\n- jaké typy tras / destinací se zmiňují.\n\nTAKEAWAYS:\n- konkrétní tip 1 (např. „pro zimní bikepacking zvaž X, protože…“)\n- konkrétní tip 2 (konkrétní komponenta, trend nebo princip)\n- konkrétní tip 3\n- konkrétní tip 4\n- klidně přidej další body, pokud dávají smysl (max. 8 bodů)\n\nTOP 3 ČLÁNKY:\n1. Název článku – URL – krátký důvod, proč je užitečný pro bikepacking / gravel.\n2. Název článku – URL – krátký důvod.\n3. Název článku – URL – krátký důvod.\n\nFORMÁT:\n- Každý nadpis (SHRNUTÍ, TAKEAWAYS, TOP 3 ČLÁNKY) začínej na novém řádku.\n- Mezi bloky nech PRÁZDNÝ ŘÁDEK.\n- Bez znaků `#`, bez markdown headingů, jen čistý text s odrážkami `-` a číslovaným seznamem `1.`.\n- Piš přímo pro zkušeného cyklistu, který jezdí gravel/bikepacking a zajímají ho detaily výbavy.\n"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "@n8n/n8n-nodes-langchain.googleGemini",
+            "typeVersion": 1,
+            "position": [
+              624,
+              0
+            ],
+            "id": "49ab324b-c856-43e6-a044-31a01cc62402",
+            "name": "Message a model",
+            "credentials": {
+              "googlePalmApi": {
+                "id": "nwYYcgaI8nEd32Bl",
+                "name": "Google Gemini(PaLM) Api account"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "url": "https://www.bikepacking.cz/feed/",
+              "options": {}
+            },
+            "type": "n8n-nodes-base.rssFeedRead",
+            "typeVersion": 1.2,
+            "position": [
+              -112,
+              128
+            ],
+            "id": "99160faf-05d6-4048-b781-3638c55a5c28",
+            "name": "RSS Read1"
+          },
+          {
+            "parameters": {
+              "url": "https://cycloscope.net/feed/",
+              "options": {}
+            },
+            "type": "n8n-nodes-base.rssFeedRead",
+            "typeVersion": 1.2,
+            "position": [
+              -112,
+              -144
+            ],
+            "id": "bf987933-66d3-417a-9ff6-7cd5fda1d416",
+            "name": "RSS Read2"
+          },
+          {
+            "parameters": {
+              "numberInputs": 3
+            },
+            "type": "n8n-nodes-base.merge",
+            "typeVersion": 3.2,
+            "position": [
+              96,
+              -16
+            ],
+            "id": "c6e7f179-4c78-4d38-ad1e-dbafaefeb359",
+            "name": "Merge"
+          },
+          {
+            "parameters": {
+              "sendTo": "zdenek.pracny@outlook.com",
+              "subject": "=🚴 Bikepacking Digest - {{ $now.format('DD.MM.YYYY') }}",
+              "message": "=<h2>🚴 Bikepacking Digest</h2>\n\n<div style=\"font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;\">\n  {{ $json.content.parts[0].text.replace(/\\n\\n/g, '<br><br>').replace(/\\n/g, '<br>') }}\n</div>\n\n<hr style=\"margin-top: 32px; border: none; border-top: 1px solid #ddd;\">\n<p style=\"font-size: 12px; color: #999; font-family: Arial, sans-serif;\">\n  Digest vygenerován automaticky přes n8n.<br>\n  Zdroje: Bikepacking.com, Bikepacking.cz, CyclingAbout.com, Cycloscope.net\n</p>\n",
+              "options": {}
+            },
+            "type": "n8n-nodes-base.gmail",
+            "typeVersion": 2.2,
+            "position": [
+              976,
+              0
+            ],
+            "id": "95420cf9-ab61-4df1-8a57-5e33cbf9843b",
+            "name": "Send a message",
+            "webhookId": "4f3bedc9-0504-484f-b85b-9f6459363c6f",
+            "credentials": {
+              "gmailOAuth2": {
+                "id": "EP4apxE1Qbr3zv7F",
+                "name": "Gmail account"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "RSS Read",
+                  "type": "main",
+                  "index": 0
+                },
+                {
+                  "node": "RSS Read1",
+                  "type": "main",
+                  "index": 0
+                },
+                {
+                  "node": "RSS Read2",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "RSS Read": {
+            "main": [
+              [
+                {
+                  "node": "Merge",
+                  "type": "main",
+                  "index": 1
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript": {
+            "main": [
+              [
+                {
+                  "node": "Message a model",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "RSS Read2": {
+            "main": [
+              [
+                {
+                  "node": "Merge",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "RSS Read1": {
+            "main": [
+              [
+                {
+                  "node": "Merge",
+                  "type": "main",
+                  "index": 2
+                }
+              ]
+            ]
+          },
+          "Merge": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Message a model": {
+            "main": [
+              [
+                {
+                  "node": "Send a message",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-19T16:10:34.811Z",
+      "createdAt": "2025-12-19T09:42:34.064Z",
+      "id": "FTNF6nICWjUFwbTo",
+      "name": "My workflow 2",
+      "description": null,
+      "active": false,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {},
+          "type": "n8n-nodes-base.manualTrigger",
+          "typeVersion": 1,
+          "position": [
+            -448,
+            -64
+          ],
+          "id": "cbadef82-fe49-4768-afca-3ca01b7384d1",
+          "name": "When clicking ‘Execute workflow’"
+        },
+        {
+          "parameters": {
+            "jsCode": "return [\n  {\n    json: {\n      name: \"🌲 Brdy (Třemošná)\",\n      lat: 49.681,\n      lon: 13.910,\n      asl: 777\n    }\n  },\n  {\n    json: {\n      name: \"Příbram\",\n      lat: 49.6708,\n      lon: 13.9934,\n      asl: 520\n    }\n  },\n  {\n    json: {\n      name: \"🏰 Blatensko\",\n      lat: 49.417,\n      lon: 13.818,\n      asl: 460\n    }\n  }\n];"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            -240,
+            -64
+          ],
+          "id": "6fc76253-240c-47ed-ba82-5ccbbad5644c",
+          "name": "Code in JavaScript"
+        },
+        {
+          "parameters": {
+            "url": "=https://my.meteoblue.com/packages/basic-1h_clouds-1h?apikey=PYD1HkVyOCjNtF2L&lat={{ $json.lat }}&lon={{ $json.lon }}&asl={{ $json.asl }}&format=json ",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            -32,
+            -64
+          ],
+          "id": "9f7220e2-1d2f-45a3-82db-7d7cd7bf21ff",
+          "name": "HTTP Request"
+        },
+        {
+          "parameters": {
+            "jsCode": "// --- 1. NAČTENÍ DAT ---\nconst items = $input.all();\nconst originalData = $('Code in JavaScript').all(); \n\nlet finalniZprava = \"<center><b>Dnešní předpověď</b><br>----------------------------------------<br>\";\n\n// --- 2. SMYČKA PŘES MĚSTA (j) ---\nfor (let j = 0; j < items.length; j++) {\n  \n  const data = items[j].json.data_1h;\n  const nazevMesta = originalData[j].json.name; \n\n  // Nadpis města\n  finalniZprava += `<br><br><b>📍 Lokalita: ${nazevMesta}</b><br>`;\n  \n  // --- ZAČÁTEK TABULKY (Místo A) ---\n  // Otevřeme tabulku a nastavíme rámeček\n  finalniZprava += `<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\">`;\n\n  // Příprava dat\n  const timeArray = data.time;\n  const windArray = data.windspeed;\n  const rainArray = data.precipitation;\n  const tempArray = data.temperature;\n  const visibilityArray = data.visibility;\n  const sunshinetimeArray = data.sunshinetime;\n\n  const aktualniHodina = new Date().getHours();\n  \n  // --- 3. VNITŘNÍ SMYČKA: HODINY (i) ---\n  for (let i = aktualniHodina; i < timeArray.length; i++) {\n\n    // ROZHODOVACÍ LOGIKA: \n  // Vypiš řádek, pokud platí:\n  // (je to první den) NEBO (je to každá šestá hodina)\n  if (i < 36 || i % 6 === 0) {\n    \n    let aktualniCykloSkore = 0;\n    let aktualniFotoSkore = 0;\n\n    // --- PODMÍNKY ---\n    // A) Vítr\n    if (windArray[i] < 3) aktualniCykloSkore += 20;\n    else if (windArray[i] < 5) aktualniCykloSkore += 15;\n    else if (windArray[i] < 7) aktualniCykloSkore += 10;\n    else if (windArray[i] < 9) aktualniCykloSkore += 0;\n\n    // B) Déšť\n    if (rainArray[i] > 0) {\n        aktualniCykloSkore -= 50; \n        aktualniFotoSkore -= 20;  \n    }\n\n    // C) Viditelnost\n    if (visibilityArray[i] < 1000) aktualniFotoSkore += 30;\n    else if (visibilityArray[i] < 10000) {aktualniFotoSkore += 0; \n                                          aktualniCykloSkore +=10;}\n    else aktualniFotoSkore += 30;\n\n    // D) Slunce\n    if (sunshinetimeArray[i] > 30) {\n      aktualniCykloSkore += 30;\n      aktualniFotoSkore += 10;\n    } else if (sunshinetimeArray[i] > 15) {\n      aktualniCykloSkore += 15;\n    } else {\n      aktualniFotoSkore += 20;\n    }\n\n    // --- VÝPIS ŘÁDKU TABULKY (Místo B) ---\n    const cas = timeArray[i].split(\" \")[1];\n    const datumdlouhy = timeArray[i].split(\" \")[0];\n    const mesic = datumdlouhy.split(\"-\")[1];\n    const den = datumdlouhy.split(\"-\")[2];\n    \n    // Tady je tvůj opravený řádek:\n   // 1. KROK: Nejdřív určíme barvu (tohle už máš správně, jen to musí být samostatně)\nlet barva = \"#ffffff\"; // Základní bílá\n\n    \nif (rainArray[i] > 0 || windArray[i] > 11) {\n    barva = \"#ffcccc\"; // Červená\n} else if (aktualniCykloSkore > 30) {\n    barva = \"#b3ffb3\"; // Zelená\n}\n\n// 2. KROK: Vytvoříme řádek tabulky\n// Změna A: Barvu dáváme do <tr> (celý řádek), ne do <td>.\n// Změna B: Proměnnou voláme jako ${barva}.\n// Změna C: Sluníčko jsme obalili do vlastního <td>, aby bylo ve sloupečku.\n\nlet pulnocniStyl = \"\";\nif (i % 24 === 0) {\n  pulnocniStyl = \"border-top: 4px solid black;\"; \n}\n    \nfinalniZprava += `<tr style=\"background-color: ${barva}\">\n    <td style=\"${pulnocniStyl} font-weight: bold;\">${den}.${mesic}.<br>\n    🕒 ${cas} </td>\n    <td>🚴 Kolo: ${aktualniCykloSkore} </td>\n    <td>📸 Foto: ${aktualniFotoSkore} </td>\n    <td>Teplota: <b>${tempArray[i]}°C</b></td>\n    <td>${sunshinetimeArray[i]}% ☀️</td>\n</tr>`;\n  }\n}\n  // --- KONEC TABULKY (Místo C) ---\n  finalniZprava += `</table><br>`;\n}\nfinalniZprava += `</center>`\n// --- 4. KONEC ---\nreturn {\n  text: finalniZprava\n};\n"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            176,
+            -64
+          ],
+          "id": "af92f933-ea23-442c-9964-042a3893de95",
+          "name": "Code in JavaScript1"
+        },
+        {
+          "parameters": {
+            "sendTo": "zdenek.pracny@outlook.com",
+            "subject": "Cyklo a Foto skore",
+            "message": "={{ $json.text }}",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.gmail",
+          "typeVersion": 2.2,
+          "position": [
+            384,
+            -64
+          ],
+          "id": "7312d475-aafd-4ae3-8021-01624f10c024",
+          "name": "Send a message",
+          "webhookId": "fed6df39-eb2c-4b9f-857b-d6adcc88b73e",
+          "credentials": {
+            "gmailOAuth2": {
+              "id": "EP4apxE1Qbr3zv7F",
+              "name": "Gmail account"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "When clicking ‘Execute workflow’": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "HTTP Request": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript1",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript1": {
+          "main": [
+            [
+              {
+                "node": "Send a message",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": null,
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "567ba7d4-51c3-447b-aefd-21febab21577",
+      "activeVersionId": null,
+      "versionCounter": 6,
+      "triggerCount": 0,
+      "shared": [
+        {
+          "updatedAt": "2025-12-19T09:42:34.069Z",
+          "createdAt": "2025-12-19T09:42:34.069Z",
+          "role": "workflow:owner",
+          "workflowId": "FTNF6nICWjUFwbTo",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": null
+    },
+    {
+      "updatedAt": "2025-12-06T07:31:23.000Z",
+      "createdAt": "2025-12-06T07:29:41.351Z",
+      "id": "GZtSJNoSQMmDW4yR",
+      "name": "Monthly Trailmetrics report",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "months",
+                  "triggerAtHour": 6,
+                  "triggerAtMinute": 30
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "54f75120-e816-4945-9afb-16b28bbac9f9",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "https://trailmetrics.pracny.app/api/n8n/monthly-report",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            192,
+            0
+          ],
+          "id": "00832169-4f78-4b68-a0c3-8898e5021ead",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "b1958d76-94b3-4327-89f4-bba1d83e45c1",
+      "activeVersionId": "b1958d76-94b3-4327-89f4-bba1d83e45c1",
+      "versionCounter": 15,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-06T07:29:41.362Z",
+          "createdAt": "2025-12-06T07:29:41.362Z",
+          "role": "workflow:owner",
+          "workflowId": "GZtSJNoSQMmDW4yR",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-06T07:31:22.976Z",
+        "createdAt": "2025-12-06T07:31:22.976Z",
+        "versionId": "b1958d76-94b3-4327-89f4-bba1d83e45c1",
+        "workflowId": "GZtSJNoSQMmDW4yR",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "months",
+                    "triggerAtHour": 6,
+                    "triggerAtMinute": 30
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "54f75120-e816-4945-9afb-16b28bbac9f9",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://trailmetrics.pracny.app/api/n8n/monthly-report",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              192,
+              0
+            ],
+            "id": "00832169-4f78-4b68-a0c3-8898e5021ead",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-06T07:17:02.000Z",
+      "createdAt": "2025-12-05T11:57:03.055Z",
+      "id": "I0iR9lLV2wULdYyY",
+      "name": "Sync data from Strava to TrailMetrics",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "hours",
+                  "hoursInterval": 6
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            -464,
+            -80
+          ],
+          "id": "b5a29ad8-2930-4587-9891-09ead1fc016c",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "https://trailmetrics.pracny.app/api/n8n/strava-sync",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            -256,
+            -80
+          ],
+          "id": "f5675e87-3ebf-4f1d-ba12-19f456c4d9ba",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": [
+            0
+          ]
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "111d65b7-52f4-453e-a925-1125e452b425",
+      "activeVersionId": "111d65b7-52f4-453e-a925-1125e452b425",
+      "versionCounter": 59,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-05T11:57:03.076Z",
+          "createdAt": "2025-12-05T11:57:03.076Z",
+          "role": "workflow:owner",
+          "workflowId": "I0iR9lLV2wULdYyY",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-06T07:17:02.149Z",
+        "createdAt": "2025-12-06T07:17:02.149Z",
+        "versionId": "111d65b7-52f4-453e-a925-1125e452b425",
+        "workflowId": "I0iR9lLV2wULdYyY",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "hours",
+                    "hoursInterval": 6
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              -464,
+              -80
+            ],
+            "id": "b5a29ad8-2930-4587-9891-09ead1fc016c",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://trailmetrics.pracny.app/api/n8n/strava-sync",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              -256,
+              -80
+            ],
+            "id": "f5675e87-3ebf-4f1d-ba12-19f456c4d9ba",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-11T16:13:48.777Z",
+      "createdAt": "2025-12-11T10:59:44.072Z",
+      "id": "Js6AZ5xagj8N5lBW",
+      "name": "pracny.app Firestore storage backup",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "months",
+                  "triggerAtDayOfMonth": 3,
+                  "triggerAtHour": 3
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            -272,
+            0
+          ],
+          "id": "15c75624-8015-457f-a51e-9dbcb2bfed58",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "url": "https://firebasestorage.googleapis.com/v0/b/pracny-app.firebasestorage.app/o ",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            208,
+            0
+          ],
+          "id": "7e5428a0-7a2f-47c6-a512-94d128525229",
+          "name": "HTTP Request"
+        },
+        {
+          "parameters": {
+            "jsCode": "const results = [];\n\nfor (const item of $input.all()) {\n  const data = item.json;\n\n  if (!data.items || !Array.isArray(data.items)) {\n    continue;\n  }\n\n  for (const file of data.items) {\n    const bucket = file.bucket || 'pracny-app.firebasestorage.app';\n    const name = file.name;\n\n    if (!name) {\n      continue;\n    }\n\n    const downloadUrl =\n      `https://firebasestorage.googleapis.com/v0/b/${bucket}/o/` +\n      encodeURIComponent(name) +\n      `?alt=media`;\n\n    results.push({\n      json: {\n        name,\n        bucket,\n        downloadUrl,\n      },\n    });\n  }\n}\n\nreturn results;\n"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            416,
+            0
+          ],
+          "id": "3b32da30-edcd-4c5e-bc65-8ddf96632506",
+          "name": "Code in JavaScript"
+        },
+        {
+          "parameters": {
+            "url": "={{$json.downloadUrl}}",
+            "options": {
+              "response": {
+                "response": {
+                  "responseFormat": "file"
+                }
+              }
+            }
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            800,
+            0
+          ],
+          "id": "f6598668-45c2-4c1a-9b5c-7653518413a6",
+          "name": "HTTP Request1",
+          "notesInFlow": false,
+          "alwaysOutputData": false,
+          "executeOnce": false,
+          "retryOnFail": false
+        },
+        {
+          "parameters": {
+            "name": "={{$now.format('yyyy-LL-dd')}}-{{$json.name}}\n\n",
+            "driveId": {
+              "__rl": true,
+              "value": "My Drive",
+              "mode": "list",
+              "cachedResultName": "My Drive",
+              "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+            },
+            "folderId": {
+              "__rl": true,
+              "value": "1lN87zz_XPNC45T6VX9x7lNFpvz94SCwG",
+              "mode": "list",
+              "cachedResultName": "storage",
+              "cachedResultUrl": "https://drive.google.com/drive/folders/1lN87zz_XPNC45T6VX9x7lNFpvz94SCwG"
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.googleDrive",
+          "typeVersion": 3,
+          "position": [
+            1024,
+            0
+          ],
+          "id": "22e2012e-f812-4c57-bddd-9fa3407589f9",
+          "name": "Upload file",
+          "credentials": {
+            "googleDriveOAuth2Api": {
+              "id": "8cfLA4WSbdrMdYUd",
+              "name": "Google Drive account"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "HTTP Request": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request1",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "HTTP Request1": {
+          "main": [
+            [
+              {
+                "node": "Upload file",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "e80077d2-f1f3-4cf3-afac-8dcf9e5dce10",
+      "activeVersionId": "e80077d2-f1f3-4cf3-afac-8dcf9e5dce10",
+      "versionCounter": 10,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-11T10:59:44.075Z",
+          "createdAt": "2025-12-11T10:59:44.075Z",
+          "role": "workflow:owner",
+          "workflowId": "Js6AZ5xagj8N5lBW",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-11T11:55:33.696Z",
+        "createdAt": "2025-12-11T11:55:33.696Z",
+        "versionId": "e80077d2-f1f3-4cf3-afac-8dcf9e5dce10",
+        "workflowId": "Js6AZ5xagj8N5lBW",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "months",
+                    "triggerAtDayOfMonth": 3,
+                    "triggerAtHour": 3
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              -272,
+              0
+            ],
+            "id": "15c75624-8015-457f-a51e-9dbcb2bfed58",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "url": "https://firebasestorage.googleapis.com/v0/b/pracny-app.firebasestorage.app/o ",
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              208,
+              0
+            ],
+            "id": "7e5428a0-7a2f-47c6-a512-94d128525229",
+            "name": "HTTP Request"
+          },
+          {
+            "parameters": {
+              "jsCode": "const results = [];\n\nfor (const item of $input.all()) {\n  const data = item.json;\n\n  if (!data.items || !Array.isArray(data.items)) {\n    continue;\n  }\n\n  for (const file of data.items) {\n    const bucket = file.bucket || 'pracny-app.firebasestorage.app';\n    const name = file.name;\n\n    if (!name) {\n      continue;\n    }\n\n    const downloadUrl =\n      `https://firebasestorage.googleapis.com/v0/b/${bucket}/o/` +\n      encodeURIComponent(name) +\n      `?alt=media`;\n\n    results.push({\n      json: {\n        name,\n        bucket,\n        downloadUrl,\n      },\n    });\n  }\n}\n\nreturn results;\n"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              416,
+              0
+            ],
+            "id": "3b32da30-edcd-4c5e-bc65-8ddf96632506",
+            "name": "Code in JavaScript"
+          },
+          {
+            "parameters": {
+              "url": "={{$json.downloadUrl}}",
+              "options": {
+                "response": {
+                  "response": {
+                    "responseFormat": "file"
+                  }
+                }
+              }
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              800,
+              0
+            ],
+            "id": "f6598668-45c2-4c1a-9b5c-7653518413a6",
+            "name": "HTTP Request1",
+            "notesInFlow": false,
+            "alwaysOutputData": false,
+            "executeOnce": false,
+            "retryOnFail": false
+          },
+          {
+            "parameters": {
+              "name": "={{$now.format('yyyy-LL-dd')}}-{{$json.name}}\n\n",
+              "driveId": {
+                "__rl": true,
+                "value": "My Drive",
+                "mode": "list",
+                "cachedResultName": "My Drive",
+                "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+              },
+              "folderId": {
+                "__rl": true,
+                "value": "1lN87zz_XPNC45T6VX9x7lNFpvz94SCwG",
+                "mode": "list",
+                "cachedResultName": "storage",
+                "cachedResultUrl": "https://drive.google.com/drive/folders/1lN87zz_XPNC45T6VX9x7lNFpvz94SCwG"
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.googleDrive",
+            "typeVersion": 3,
+            "position": [
+              1024,
+              0
+            ],
+            "id": "22e2012e-f812-4c57-bddd-9fa3407589f9",
+            "name": "Upload file",
+            "credentials": {
+              "googleDriveOAuth2Api": {
+                "id": "8cfLA4WSbdrMdYUd",
+                "name": "Google Drive account"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "HTTP Request": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request1",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "HTTP Request1": {
+            "main": [
+              [
+                {
+                  "node": "Upload file",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-06T11:08:26.000Z",
+      "createdAt": "2025-12-06T09:24:21.294Z",
+      "id": "NrgQ6cNa7sHp2SdZ",
+      "name": "Trailmetrics maintanence report",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "cronExpression",
+                  "expression": "0 0 0 1 1 *"
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "703c8c54-76b3-448c-b334-1dadef7a4433",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "https://trailmetrics.pracny.app/api/n8n/maintenance-check",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            192,
+            0
+          ],
+          "id": "c1c5f055-60e5-48d3-a466-e35ba803214d",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "8a671425-48fc-42f0-8a06-f247597672c7",
+      "activeVersionId": "8a671425-48fc-42f0-8a06-f247597672c7",
+      "versionCounter": 19,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-06T09:24:21.313Z",
+          "createdAt": "2025-12-06T09:24:21.313Z",
+          "role": "workflow:owner",
+          "workflowId": "NrgQ6cNa7sHp2SdZ",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-06T11:08:26.032Z",
+        "createdAt": "2025-12-06T11:08:26.032Z",
+        "versionId": "8a671425-48fc-42f0-8a06-f247597672c7",
+        "workflowId": "NrgQ6cNa7sHp2SdZ",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "cronExpression",
+                    "expression": "0 0 0 1 1 *"
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "703c8c54-76b3-448c-b334-1dadef7a4433",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://trailmetrics.pracny.app/api/n8n/maintenance-check",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              192,
+              0
+            ],
+            "id": "c1c5f055-60e5-48d3-a466-e35ba803214d",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-16T13:24:24.691Z",
+      "createdAt": "2025-12-16T13:23:21.663Z",
+      "id": "Ymp83uK09sfowDDD",
+      "name": "Trailmetrics memories",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "triggerAtHour": 7
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "64309f39-1f28-498c-b947-b66b83de4b65",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "http://trailmetrics.pracny.app/api/n8n/memories",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            192,
+            0
+          ],
+          "id": "07c8feb0-1230-4089-9173-d87915811091",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "1848c14c-e761-4bc8-a30e-af3f1e73045e",
+      "activeVersionId": "1848c14c-e761-4bc8-a30e-af3f1e73045e",
+      "versionCounter": 15,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-16T13:23:21.668Z",
+          "createdAt": "2025-12-16T13:23:21.668Z",
+          "role": "workflow:owner",
+          "workflowId": "Ymp83uK09sfowDDD",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-16T13:24:24.692Z",
+        "createdAt": "2025-12-16T13:24:24.692Z",
+        "versionId": "1848c14c-e761-4bc8-a30e-af3f1e73045e",
+        "workflowId": "Ymp83uK09sfowDDD",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "triggerAtHour": 7
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "64309f39-1f28-498c-b947-b66b83de4b65",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "http://trailmetrics.pracny.app/api/n8n/memories",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              192,
+              0
+            ],
+            "id": "07c8feb0-1230-4089-9173-d87915811091",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-18T17:32:54.000Z",
+      "createdAt": "2025-12-18T15:58:42.986Z",
+      "id": "a0olCPauRkxgcMPp",
+      "name": "Trailmetrics Firestore storage backup",
+      "description": null,
+      "active": false,
+      "isArchived": true,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "months",
+                  "triggerAtDayOfMonth": 3,
+                  "triggerAtHour": 3
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            -272,
+            0
+          ],
+          "id": "e1c75ddd-fece-4489-a220-dcc77ddc2179",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "url": "https://firebasestorage.googleapis.com/v0/b/pracny-app.firebasestorage.app/o ",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            208,
+            0
+          ],
+          "id": "a2274094-0926-468e-8613-4fd92be62bde",
+          "name": "HTTP Request"
+        },
+        {
+          "parameters": {
+            "jsCode": "const results = [];\n\nfor (const item of $input.all()) {\n  const data = item.json;\n\n  if (!data.items || !Array.isArray(data.items)) {\n    continue;\n  }\n\n  for (const file of data.items) {\n    const bucket = file.bucket || 'pracny-app.firebasestorage.app';\n    const name = file.name;\n\n    if (!name) {\n      continue;\n    }\n\n    const downloadUrl =\n      `https://firebasestorage.googleapis.com/v0/b/${bucket}/o/` +\n      encodeURIComponent(name) +\n      `?alt=media`;\n\n    results.push({\n      json: {\n        name,\n        bucket,\n        downloadUrl,\n      },\n    });\n  }\n}\n\nreturn results;\n"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            416,
+            0
+          ],
+          "id": "56d33e72-76c4-49d1-8b3a-65a61543960d",
+          "name": "Code in JavaScript"
+        },
+        {
+          "parameters": {
+            "url": "={{$json.downloadUrl}}",
+            "options": {
+              "response": {
+                "response": {
+                  "responseFormat": "file"
+                }
+              }
+            }
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            800,
+            0
+          ],
+          "id": "037e85fd-9939-4b56-8d84-7c36bda4cfb2",
+          "name": "HTTP Request1",
+          "notesInFlow": false,
+          "alwaysOutputData": false,
+          "executeOnce": false,
+          "retryOnFail": false
+        },
+        {
+          "parameters": {
+            "name": "={{$now.format('yyyy-LL-dd')}}-{{$json.name}}\n\n",
+            "driveId": {
+              "__rl": true,
+              "value": "My Drive",
+              "mode": "list",
+              "cachedResultName": "My Drive",
+              "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+            },
+            "folderId": {
+              "__rl": true,
+              "value": "1lN87zz_XPNC45T6VX9x7lNFpvz94SCwG",
+              "mode": "list",
+              "cachedResultName": "storage",
+              "cachedResultUrl": "https://drive.google.com/drive/folders/1lN87zz_XPNC45T6VX9x7lNFpvz94SCwG"
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.googleDrive",
+          "typeVersion": 3,
+          "position": [
+            1024,
+            0
+          ],
+          "id": "a6a8fd22-2184-4986-a9a9-d9b0a3200a18",
+          "name": "Upload file",
+          "credentials": {
+            "googleDriveOAuth2Api": {
+              "id": "8cfLA4WSbdrMdYUd",
+              "name": "Google Drive account"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "HTTP Request": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request1",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "HTTP Request1": {
+          "main": [
+            [
+              {
+                "node": "Upload file",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "230f9032-1cba-41e8-a3f5-994426a05b35",
+      "activeVersionId": null,
+      "versionCounter": 10,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-18T15:58:42.990Z",
+          "createdAt": "2025-12-18T15:58:42.990Z",
+          "role": "workflow:owner",
+          "workflowId": "a0olCPauRkxgcMPp",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": null
+    },
+    {
+      "updatedAt": "2025-12-10T12:43:43.644Z",
+      "createdAt": "2025-12-10T08:41:21.925Z",
+      "id": "dHQzpTlCCEjNLwYg",
+      "name": "pracny.app Firestore database backup",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "weeks",
+                  "triggerAtHour": 3
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "5a06f58b-3c84-49be-831b-d2cb4d61a80e",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "resource": "collection",
+            "projectId": "pracny-app",
+            "returnAll": true
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            208,
+            0
+          ],
+          "id": "12ec5084-fb58-49ea-bd7d-06af8dacb269",
+          "name": "Get many collections",
+          "credentials": {
+            "googleApi": {
+              "id": "7SEdATwtd8U6o87G",
+              "name": "Google Firebase Cloud Firestore pracny.app"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "jsCode": "// Input: z Get many collections dostaneš items jako\n// [{ json: { name: \"digitalGear\" } }, { json: { name: \"gearCategories\" } }, ...]\n// Cíl: pro každý název kolekce vytvořit jeden item, aby se přes něj\n// mohl spustit Firestore node \"Get Many Documents\" s dynamickým názvem kolekce.\n\nconst results = [];\n\n// Projdi všechny vstupní položky (každá má json.name = název kolekce)\nfor (const item of $input.all()) {\n  const collectionName = item.json.name;\n\n  // Můžeš případně některé kolekce přeskočit, např. jen vybrané:\n  // if (!['digitalGear', 'gearCategories', 'photos', 'posts', 'projects', 'yearlyStats'].includes(collectionName)) {\n  //   continue;\n  // }\n\n  results.push({\n    json: {\n      collection: collectionName,\n    },\n  });\n}\n\n// Výstup: pole items, kde každý item má json.collection = název kolekce\nreturn results;\n"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            416,
+            0
+          ],
+          "id": "32dcc4dc-3a3c-48f4-b874-0594a219ff43",
+          "name": "Code in JavaScript"
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "operation": "getAll",
+            "projectId": "pracny-app",
+            "collection": "={{$json.collection}}\n",
+            "returnAll": true
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            624,
+            0
+          ],
+          "id": "85890dc3-4866-4aac-b9c9-21ac14fe5cb6",
+          "name": "Get many documents",
+          "credentials": {
+            "googleApi": {
+              "id": "7SEdATwtd8U6o87G",
+              "name": "Google Firebase Cloud Firestore pracny.app"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "jsCode": "// Cíl: poskládat výstup ve tvaru:\n// {\n//   digitalGear: [ {...doc1}, {...doc2}, ... ],\n//   gearCategories: [ ... ],\n//   photos: [ ... ],\n//   posts: [ ... ],\n//   projects: [ ... ],\n//   yearlyStats: [ ... ]\n// }\n\nconst backup = {};\n\nconst items = $input.all();\n\nfor (const item of items) {\n  const data = item.json;\n\n  const fullName = data._name;\n  if (!fullName) {\n    continue;\n  }\n\n  const parts = fullName.split('/');\n  const docId = parts[parts.length - 1];\n  const collectionName = parts[parts.length - 2];\n\n  if (!collectionName) {\n    continue;\n  }\n\n  if (!backup[collectionName]) {\n    backup[collectionName] = [];\n  }\n\n  // Odfiltrujeme interní metadata, necháme si jen vlastní data + id\n  const { _name, _createTime, _updateTime, ...cleanData } = data;\n\n  backup[collectionName].push({\n    id: docId,\n    ...cleanData,\n  });\n}\n\n// DŮLEŽITÉ: vždy vrátit pole objektů\nreturn [\n  {\n    json: backup,\n  },\n];\n"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            832,
+            0
+          ],
+          "id": "65e6b80f-a096-44d2-9d1c-9298b703e078",
+          "name": "Code in JavaScript1"
+        },
+        {
+          "parameters": {
+            "operation": "toJson",
+            "options": {
+              "fileName": "=pracny-firestore-{{$now}}.json"
+            }
+          },
+          "type": "n8n-nodes-base.convertToFile",
+          "typeVersion": 1.1,
+          "position": [
+            1040,
+            0
+          ],
+          "id": "ccda1b1f-50ba-4fe2-8cc9-690c8d89dd6d",
+          "name": "Convert to File"
+        },
+        {
+          "parameters": {
+            "name": "=pracny-firestore-{{$now}}.json",
+            "driveId": {
+              "__rl": true,
+              "mode": "list",
+              "value": "My Drive"
+            },
+            "folderId": {
+              "__rl": true,
+              "value": "1MtqpcClEnkSARhaVpkm4QroHRJ8O8e1d",
+              "mode": "list",
+              "cachedResultName": "firestore",
+              "cachedResultUrl": "https://drive.google.com/drive/folders/1MtqpcClEnkSARhaVpkm4QroHRJ8O8e1d"
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.googleDrive",
+          "typeVersion": 3,
+          "position": [
+            1248,
+            0
+          ],
+          "id": "8fe281e4-fcc7-46a1-ac1c-4c5e9de117fc",
+          "name": "Upload file",
+          "credentials": {
+            "googleDriveOAuth2Api": {
+              "id": "8cfLA4WSbdrMdYUd",
+              "name": "Google Drive account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "operation": "create",
+            "projectId": "pracny-app",
+            "collection": "backupLogs",
+            "columns": "={\n  \"type\": \"pracny-firestore\",\n  \"status\": \"success\",\n  \"timestamp\": \"{{$now}}\",\n  \"message\": \"Záloha pracny.app Firestore na Google Drive proběhla úspěšně.\"\n}"
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            1456,
+            0
+          ],
+          "id": "3a18632b-ff85-4f86-8d7d-eafc5bb05b8e",
+          "name": "Create a document",
+          "credentials": {
+            "googleApi": {
+              "id": "7SEdATwtd8U6o87G",
+              "name": "Google Firebase Cloud Firestore pracny.app"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "Get many collections",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get many collections": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript": {
+          "main": [
+            [
+              {
+                "node": "Get many documents",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get many documents": {
+          "main": [
+            [
+              {
+                "node": "Code in JavaScript1",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code in JavaScript1": {
+          "main": [
+            [
+              {
+                "node": "Convert to File",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Convert to File": {
+          "main": [
+            [
+              {
+                "node": "Upload file",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Upload file": {
+          "main": [
+            [
+              {
+                "node": "Create a document",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "4319cd88-2409-4c25-8834-a0b3b73a80db",
+      "activeVersionId": "4319cd88-2409-4c25-8834-a0b3b73a80db",
+      "versionCounter": 17,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-10T08:41:21.930Z",
+          "createdAt": "2025-12-10T08:41:21.930Z",
+          "role": "workflow:owner",
+          "workflowId": "dHQzpTlCCEjNLwYg",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-10T12:43:33.091Z",
+        "createdAt": "2025-12-10T12:43:33.091Z",
+        "versionId": "4319cd88-2409-4c25-8834-a0b3b73a80db",
+        "workflowId": "dHQzpTlCCEjNLwYg",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "weeks",
+                    "triggerAtHour": 3
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "5a06f58b-3c84-49be-831b-d2cb4d61a80e",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "resource": "collection",
+              "projectId": "pracny-app",
+              "returnAll": true
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              208,
+              0
+            ],
+            "id": "12ec5084-fb58-49ea-bd7d-06af8dacb269",
+            "name": "Get many collections",
+            "credentials": {
+              "googleApi": {
+                "id": "7SEdATwtd8U6o87G",
+                "name": "Google Firebase Cloud Firestore pracny.app"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "jsCode": "// Input: z Get many collections dostaneš items jako\n// [{ json: { name: \"digitalGear\" } }, { json: { name: \"gearCategories\" } }, ...]\n// Cíl: pro každý název kolekce vytvořit jeden item, aby se přes něj\n// mohl spustit Firestore node \"Get Many Documents\" s dynamickým názvem kolekce.\n\nconst results = [];\n\n// Projdi všechny vstupní položky (každá má json.name = název kolekce)\nfor (const item of $input.all()) {\n  const collectionName = item.json.name;\n\n  // Můžeš případně některé kolekce přeskočit, např. jen vybrané:\n  // if (!['digitalGear', 'gearCategories', 'photos', 'posts', 'projects', 'yearlyStats'].includes(collectionName)) {\n  //   continue;\n  // }\n\n  results.push({\n    json: {\n      collection: collectionName,\n    },\n  });\n}\n\n// Výstup: pole items, kde každý item má json.collection = název kolekce\nreturn results;\n"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              416,
+              0
+            ],
+            "id": "32dcc4dc-3a3c-48f4-b874-0594a219ff43",
+            "name": "Code in JavaScript"
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "operation": "getAll",
+              "projectId": "pracny-app",
+              "collection": "={{$json.collection}}\n",
+              "returnAll": true
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              624,
+              0
+            ],
+            "id": "85890dc3-4866-4aac-b9c9-21ac14fe5cb6",
+            "name": "Get many documents",
+            "credentials": {
+              "googleApi": {
+                "id": "7SEdATwtd8U6o87G",
+                "name": "Google Firebase Cloud Firestore pracny.app"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "jsCode": "// Cíl: poskládat výstup ve tvaru:\n// {\n//   digitalGear: [ {...doc1}, {...doc2}, ... ],\n//   gearCategories: [ ... ],\n//   photos: [ ... ],\n//   posts: [ ... ],\n//   projects: [ ... ],\n//   yearlyStats: [ ... ]\n// }\n\nconst backup = {};\n\nconst items = $input.all();\n\nfor (const item of items) {\n  const data = item.json;\n\n  const fullName = data._name;\n  if (!fullName) {\n    continue;\n  }\n\n  const parts = fullName.split('/');\n  const docId = parts[parts.length - 1];\n  const collectionName = parts[parts.length - 2];\n\n  if (!collectionName) {\n    continue;\n  }\n\n  if (!backup[collectionName]) {\n    backup[collectionName] = [];\n  }\n\n  // Odfiltrujeme interní metadata, necháme si jen vlastní data + id\n  const { _name, _createTime, _updateTime, ...cleanData } = data;\n\n  backup[collectionName].push({\n    id: docId,\n    ...cleanData,\n  });\n}\n\n// DŮLEŽITÉ: vždy vrátit pole objektů\nreturn [\n  {\n    json: backup,\n  },\n];\n"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              832,
+              0
+            ],
+            "id": "65e6b80f-a096-44d2-9d1c-9298b703e078",
+            "name": "Code in JavaScript1"
+          },
+          {
+            "parameters": {
+              "operation": "toJson",
+              "options": {
+                "fileName": "=pracny-firestore-{{$now}}.json"
+              }
+            },
+            "type": "n8n-nodes-base.convertToFile",
+            "typeVersion": 1.1,
+            "position": [
+              1040,
+              0
+            ],
+            "id": "ccda1b1f-50ba-4fe2-8cc9-690c8d89dd6d",
+            "name": "Convert to File"
+          },
+          {
+            "parameters": {
+              "name": "=pracny-firestore-{{$now}}.json",
+              "driveId": {
+                "__rl": true,
+                "mode": "list",
+                "value": "My Drive"
+              },
+              "folderId": {
+                "__rl": true,
+                "value": "1MtqpcClEnkSARhaVpkm4QroHRJ8O8e1d",
+                "mode": "list",
+                "cachedResultName": "firestore",
+                "cachedResultUrl": "https://drive.google.com/drive/folders/1MtqpcClEnkSARhaVpkm4QroHRJ8O8e1d"
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.googleDrive",
+            "typeVersion": 3,
+            "position": [
+              1248,
+              0
+            ],
+            "id": "8fe281e4-fcc7-46a1-ac1c-4c5e9de117fc",
+            "name": "Upload file",
+            "credentials": {
+              "googleDriveOAuth2Api": {
+                "id": "8cfLA4WSbdrMdYUd",
+                "name": "Google Drive account"
+              }
+            }
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "operation": "create",
+              "projectId": "pracny-app",
+              "collection": "backupLogs",
+              "columns": "={\n  \"type\": \"pracny-firestore\",\n  \"status\": \"success\",\n  \"timestamp\": \"{{$now}}\",\n  \"message\": \"Záloha pracny.app Firestore na Google Drive proběhla úspěšně.\"\n}"
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              1456,
+              0
+            ],
+            "id": "3a18632b-ff85-4f86-8d7d-eafc5bb05b8e",
+            "name": "Create a document",
+            "credentials": {
+              "googleApi": {
+                "id": "7SEdATwtd8U6o87G",
+                "name": "Google Firebase Cloud Firestore pracny.app"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "Get many collections",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Get many collections": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript": {
+            "main": [
+              [
+                {
+                  "node": "Get many documents",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Get many documents": {
+            "main": [
+              [
+                {
+                  "node": "Code in JavaScript1",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code in JavaScript1": {
+            "main": [
+              [
+                {
+                  "node": "Convert to File",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Convert to File": {
+            "main": [
+              [
+                {
+                  "node": "Upload file",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Upload file": {
+            "main": [
+              [
+                {
+                  "node": "Create a document",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-06T07:34:32.000Z",
+      "createdAt": "2025-12-06T07:31:35.801Z",
+      "id": "iDsEfMqEd8TJI4qI",
+      "name": "Yearly Trailmetrics report",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "field": "cronExpression",
+                  "expression": "0 0 0 1 1 *"
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "47fbf11e-ef70-4db0-9f47-e151880cbb80",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "method": "POST",
+            "url": "https://trailmetrics.pracny.app/api/n8n/yearly-report",
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            192,
+            0
+          ],
+          "id": "1cfed478-029f-462e-9e79-1488bf9fbe4e",
+          "name": "HTTP Request"
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": null,
+      "pinData": {},
+      "versionId": "e623817f-d681-4f8a-bada-2f8a9cb22281",
+      "activeVersionId": "e623817f-d681-4f8a-bada-2f8a9cb22281",
+      "versionCounter": 17,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-06T07:31:35.813Z",
+          "createdAt": "2025-12-06T07:31:35.813Z",
+          "role": "workflow:owner",
+          "workflowId": "iDsEfMqEd8TJI4qI",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-06T07:34:32.207Z",
+        "createdAt": "2025-12-06T07:34:32.207Z",
+        "versionId": "e623817f-d681-4f8a-bada-2f8a9cb22281",
+        "workflowId": "iDsEfMqEd8TJI4qI",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "cronExpression",
+                    "expression": "0 0 0 1 1 *"
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "47fbf11e-ef70-4db0-9f47-e151880cbb80",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://trailmetrics.pracny.app/api/n8n/yearly-report",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              192,
+              0
+            ],
+            "id": "1cfed478-029f-462e-9e79-1488bf9fbe4e",
+            "name": "HTTP Request"
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    },
+    {
+      "updatedAt": "2025-12-19T09:37:37.796Z",
+      "createdAt": "2025-12-18T18:40:02.828Z",
+      "id": "qEqkTXd1C8XDRlVY",
+      "name": "My workflow",
+      "description": null,
+      "active": false,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {},
+          "type": "n8n-nodes-base.manualTrigger",
+          "typeVersion": 1,
+          "position": [
+            -592,
+            -112
+          ],
+          "id": "37f11a5c-4d1f-4afe-bb3b-302a8e81bd2a",
+          "name": "When clicking ‘Execute workflow’"
+        },
+        {
+          "parameters": {
+            "modelId": {
+              "__rl": true,
+              "value": "gpt-4.1-nano",
+              "mode": "list",
+              "cachedResultName": "GPT-4.1-NANO"
+            },
+            "responses": {
+              "values": [
+                {
+                  "content": "Vytvoř mi zajímavý a nevšední pozdrav. Každý pozdrav unikátní. Jen pozdrav. "
+                }
+              ]
+            },
+            "builtInTools": {},
+            "options": {}
+          },
+          "type": "@n8n/n8n-nodes-langchain.openAi",
+          "typeVersion": 2.1,
+          "position": [
+            -80,
+            -112
+          ],
+          "id": "18d7806e-05fa-4802-a030-a4a1cbb261c5",
+          "name": "Message a model",
+          "credentials": {
+            "openAiApi": {
+              "id": "0tpklUd971zJAU1D",
+              "name": "OpenAi account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "operation": "append",
+            "documentId": {
+              "__rl": true,
+              "value": "1VKGvUcUA-bjJsY4pyAuIizbkNxh-hwtHeGB-Hsm6HPc",
+              "mode": "list",
+              "cachedResultName": "pozdravy",
+              "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VKGvUcUA-bjJsY4pyAuIizbkNxh-hwtHeGB-Hsm6HPc/edit?usp=drivesdk"
+            },
+            "sheetName": {
+              "__rl": true,
+              "value": "gid=0",
+              "mode": "list",
+              "cachedResultName": "List 1",
+              "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VKGvUcUA-bjJsY4pyAuIizbkNxh-hwtHeGB-Hsm6HPc/edit#gid=0"
+            },
+            "columns": {
+              "mappingMode": "defineBelow",
+              "value": {
+                "Pozdrav": "={{ $json.output[0].content[0].text }}"
+              },
+              "matchingColumns": [
+                "Pozdrav"
+              ],
+              "schema": [
+                {
+                  "id": "Pozdrav",
+                  "displayName": "Pozdrav",
+                  "required": false,
+                  "defaultMatch": false,
+                  "display": true,
+                  "type": "string",
+                  "canBeUsedToMatch": true,
+                  "removed": false
+                },
+                {
+                  "id": "output",
+                  "displayName": "output",
+                  "required": false,
+                  "defaultMatch": false,
+                  "display": true,
+                  "type": "string",
+                  "canBeUsedToMatch": true,
+                  "removed": false
+                }
+              ],
+              "attemptToConvertTypes": false,
+              "convertFieldsToString": false
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.googleSheets",
+          "typeVersion": 4.7,
+          "position": [
+            272,
+            -112
+          ],
+          "id": "4dd8d88f-abab-4f88-ba2c-d3150bfa8970",
+          "name": "Append row in sheet",
+          "credentials": {
+            "googleSheetsOAuth2Api": {
+              "id": "ZXMaqGMI2QAyGND6",
+              "name": "Google Sheets account"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "When clicking ‘Execute workflow’": {
+          "main": [
+            [
+              {
+                "node": "Message a model",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Message a model": {
+          "main": [
+            [
+              {
+                "node": "Append row in sheet",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": null,
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "a4c9dd1d-733c-4eff-b6ce-814d608c2232",
+      "activeVersionId": null,
+      "versionCounter": 3,
+      "triggerCount": 0,
+      "shared": [
+        {
+          "updatedAt": "2025-12-18T18:40:02.835Z",
+          "createdAt": "2025-12-18T18:40:02.835Z",
+          "role": "workflow:owner",
+          "workflowId": "qEqkTXd1C8XDRlVY",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": null
+    },
+    {
+      "updatedAt": "2025-12-09T18:35:30.027Z",
+      "createdAt": "2025-12-06T11:08:50.221Z",
+      "id": "tWQyLhT4m0CorMyk",
+      "name": "Trailmetrics YTD status",
+      "description": null,
+      "active": true,
+      "isArchived": false,
+      "nodes": [
+        {
+          "parameters": {
+            "rule": {
+              "interval": [
+                {
+                  "triggerAtHour": 7
+                }
+              ]
+            }
+          },
+          "type": "n8n-nodes-base.scheduleTrigger",
+          "typeVersion": 1.3,
+          "position": [
+            0,
+            0
+          ],
+          "id": "bb10313e-1495-4831-8f27-e6574f173061",
+          "name": "Schedule Trigger"
+        },
+        {
+          "parameters": {
+            "url": "https://trailmetrics.pracny.app/api/stats/yearly?",
+            "sendQuery": true,
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "year",
+                  "value": "={{ new Date().getFullYear() }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer j@kZths65jskI8"
+                }
+              ]
+            },
+            "options": {}
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.3,
+          "position": [
+            160,
+            0
+          ],
+          "id": "923a6d15-53f1-4164-9140-bcf616f0f41f",
+          "name": "HTTP Request"
+        },
+        {
+          "parameters": {
+            "jsCode": "const trailmetricsData = items[0].json;\n\nreturn [{\n  json: {\n    __id__: new Date().getFullYear().toString(),\n    year: trailmetricsData.year,\n    totalDistance: trailmetricsData.totalDistance,\n    totalElevation: trailmetricsData.totalElevation,\n    updatedAt: new Date().toISOString(),\n  }\n}];"
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            368,
+            0
+          ],
+          "id": "6a757afa-4d37-477f-b26f-8d1a08842d72",
+          "name": "Code"
+        },
+        {
+          "parameters": {
+            "authentication": "serviceAccount",
+            "operation": "upsert",
+            "projectId": "pracny-app",
+            "collection": "yearlyStats",
+            "updateKey": "__id__",
+            "columns": "year,totalDistance,totalElevation,updatedAt"
+          },
+          "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+          "typeVersion": 1.1,
+          "position": [
+            576,
+            0
+          ],
+          "id": "7a618fb7-e2c4-45c1-85aa-6e1f8f05ec3d",
+          "name": "Create or update a document",
+          "credentials": {
+            "googleApi": {
+              "id": "7SEdATwtd8U6o87G",
+              "name": "Google Firebase Cloud Firestore account"
+            }
+          }
+        }
+      ],
+      "connections": {
+        "Schedule Trigger": {
+          "main": [
+            [
+              {
+                "node": "HTTP Request",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "HTTP Request": {
+          "main": [
+            [
+              {
+                "node": "Code",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Code": {
+          "main": [
+            [
+              {
+                "node": "Create or update a document",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1"
+      },
+      "staticData": {
+        "node:Schedule Trigger": {
+          "recurrenceRules": []
+        }
+      },
+      "meta": {
+        "templateCredsSetupCompleted": true
+      },
+      "pinData": {},
+      "versionId": "08a34fce-5028-4463-ac4e-f93c521cef37",
+      "activeVersionId": "08a34fce-5028-4463-ac4e-f93c521cef37",
+      "versionCounter": 25,
+      "triggerCount": 1,
+      "shared": [
+        {
+          "updatedAt": "2025-12-06T11:08:50.233Z",
+          "createdAt": "2025-12-06T11:08:50.233Z",
+          "role": "workflow:owner",
+          "workflowId": "tWQyLhT4m0CorMyk",
+          "projectId": "bK3QeQzJrLYxXnHL",
+          "project": {
+            "updatedAt": "2025-12-05T11:07:00.901Z",
+            "createdAt": "2025-12-05T10:55:42.706Z",
+            "id": "bK3QeQzJrLYxXnHL",
+            "name": "Zdenek Pracny <zdenek.pracny@outlook.com>",
+            "type": "personal",
+            "icon": null,
+            "description": null,
+            "projectRelations": [
+              {
+                "updatedAt": "2025-12-05T10:55:42.707Z",
+                "createdAt": "2025-12-05T10:55:42.707Z",
+                "userId": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                "projectId": "bK3QeQzJrLYxXnHL",
+                "user": {
+                  "updatedAt": "2025-12-21T02:00:56.000Z",
+                  "createdAt": "2025-12-05T10:55:41.168Z",
+                  "id": "d32ac23b-334b-444e-aeeb-57fbb6a0534f",
+                  "email": "zdenek.pracny@outlook.com",
+                  "firstName": "Zdenek",
+                  "lastName": "Pracny",
+                  "personalizationAnswers": {
+                    "version": "v4",
+                    "personalization_survey_submitted_at": "2025-12-05T11:07:20.377Z",
+                    "personalization_survey_n8n_version": "1.122.5",
+                    "companyType": "personal",
+                    "reportedSource": "twitter"
+                  },
+                  "settings": {
+                    "userActivated": true,
+                    "firstSuccessfulWorkflowId": "I0iR9lLV2wULdYyY",
+                    "userActivatedAt": 1764954029118,
+                    "npsSurvey": {
+                      "responded": true,
+                      "lastShownAt": 1765305331058
+                    },
+                    "easyAIWorkflowOnboarded": true
+                  },
+                  "disabled": false,
+                  "mfaEnabled": true,
+                  "lastActiveAt": "2025-12-21",
+                  "isPending": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "activeVersion": {
+        "updatedAt": "2025-12-09T18:35:30.032Z",
+        "createdAt": "2025-12-09T18:35:30.032Z",
+        "versionId": "08a34fce-5028-4463-ac4e-f93c521cef37",
+        "workflowId": "tWQyLhT4m0CorMyk",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "triggerAtHour": 7
+                  }
+                ]
+              }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.3,
+            "position": [
+              0,
+              0
+            ],
+            "id": "bb10313e-1495-4831-8f27-e6574f173061",
+            "name": "Schedule Trigger"
+          },
+          {
+            "parameters": {
+              "url": "https://trailmetrics.pracny.app/api/stats/yearly?",
+              "sendQuery": true,
+              "queryParameters": {
+                "parameters": [
+                  {
+                    "name": "year",
+                    "value": "={{ new Date().getFullYear() }}"
+                  }
+                ]
+              },
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "value": "Bearer j@kZths65jskI8"
+                  }
+                ]
+              },
+              "options": {}
+            },
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.3,
+            "position": [
+              160,
+              0
+            ],
+            "id": "923a6d15-53f1-4164-9140-bcf616f0f41f",
+            "name": "HTTP Request"
+          },
+          {
+            "parameters": {
+              "jsCode": "const trailmetricsData = items[0].json;\n\nreturn [{\n  json: {\n    __id__: new Date().getFullYear().toString(),\n    year: trailmetricsData.year,\n    totalDistance: trailmetricsData.totalDistance,\n    totalElevation: trailmetricsData.totalElevation,\n    updatedAt: new Date().toISOString(),\n  }\n}];"
+            },
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              368,
+              0
+            ],
+            "id": "6a757afa-4d37-477f-b26f-8d1a08842d72",
+            "name": "Code"
+          },
+          {
+            "parameters": {
+              "authentication": "serviceAccount",
+              "operation": "upsert",
+              "projectId": "pracny-app",
+              "collection": "yearlyStats",
+              "updateKey": "__id__",
+              "columns": "year,totalDistance,totalElevation,updatedAt"
+            },
+            "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "typeVersion": 1.1,
+            "position": [
+              576,
+              0
+            ],
+            "id": "7a618fb7-e2c4-45c1-85aa-6e1f8f05ec3d",
+            "name": "Create or update a document",
+            "credentials": {
+              "googleApi": {
+                "id": "7SEdATwtd8U6o87G",
+                "name": "Google Firebase Cloud Firestore account"
+              }
+            }
+          }
+        ],
+        "connections": {
+          "Schedule Trigger": {
+            "main": [
+              [
+                {
+                  "node": "HTTP Request",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "HTTP Request": {
+            "main": [
+              [
+                {
+                  "node": "Code",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Code": {
+            "main": [
+              [
+                {
+                  "node": "Create or update a document",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        },
+        "authors": "Zdenek Pracny",
+        "name": null,
+        "description": null
+      }
+    }
+  ]
+}
